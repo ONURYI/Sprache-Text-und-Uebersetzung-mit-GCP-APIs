@@ -1,2 +1,2 @@
-# Sprache, Text und Übersetzung GCP-APIs
+# Sprache, Text und Übersetzung GCP APIs
 
