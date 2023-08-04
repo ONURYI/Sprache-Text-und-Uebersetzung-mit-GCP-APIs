@@ -2,68 +2,55 @@
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
 \usepackage{graphicx}
-\usepackage{lipsum} % Für Beispieltext
 \usepackage{booktabs} % Für Tabellen
 \usepackage{caption}
-\usepackage{hyperref}
-\usepackage[backend=biber,style=numeric]{biblatex}
 
 
-
-% Pfad zur .bib-Datei mit Literaturquellen
-\addbibresource{references.bib}
+\usepackage[hypertexnames=false]{hyperref} % Hinzugefügte Option
 
 \begin{document}
 	
-	% Titelseite
-	\begin{titlepage}
-		\begin{center}
-			\vspace*{1cm}
-			\Huge
-			 Sprache, Spracheingabe, Text \& Übersetzung mit Google Cloud APIs
-			
-			
-			\vspace{1.5cm}
-			\LARGE
-			M.Sc. Onur Yilmaz
-			
-			\vspace{1.5cm}
-			\Large
-			Angewandte Künstliche Intelligenz
-			
-			\vfill
-			
-			Schriftliche Ausarbeitung
-			
-			\vspace{0.8cm}
-			\Large
-			Betreuer: Prof. Dr. Giefers
-			
-			\vspace{0.5cm}
-			\large
-			Fachhochschule Südwestfalen
-			\today
-		\end{center}
-	\end{titlepage}
-	
-	% Inhaltsverzeichnis
-	\tableofcontents
-	\newpage
-	% Einleitung
-	\section{Einleitung}
+		
+		% Titelseite
+		\begin{titlepage}
+			\begin{center}
+				\vspace*{1cm}
+				\Huge
+				Sprache, Spracheingabe, Text \& Übersetzung mit Google Cloud APIs
+				
+				
+				\vspace{1.5cm}
+				\LARGE
+				M.Sc. Onur Yilmaz
+				
+				\vspace{1.5cm}
+				\Large
+				Angewandte Künstliche Intelligenz
+				
+				\vfill
+				
+				Schriftliche Ausarbeitung
+				
+				\vspace{0.8cm}
+				\Large
+				Betreuer: Prof. Dr. Giefers
+				
+				\vspace{0.5cm}
+				\large
+				Fachhochschule Südwestfalen
+				\today
+			\end{center}
+		\end{titlepage}
 
-	\section{Transkription von Sprache zu Text mit der Cloud Speech API}
-	
-	\section{Messung und Verbesserung der Sprachgenauigkeit}
-	
-	\section{Textübersetzung mit der Cloud Translation API}
-	
-	\section{Text in Kategorien einordnen mit der Natural Language API}
-	
-	\section{Entitäten- und Gefühlsanalyse mit der Natural Language API}
-	
-	\section{Synthetische Sprache erstellen mit Text-to-Speech}
+\thispagestyle{empty}
+\tableofcontents
 
+\newpage
+	\section{Einleitung} \cite{google}
+	
 
+\newpage
+	\bibliographystyle{plain} % oder ein anderer Stil, der dir gefällt
+	\bibliography{references} % Der Name deiner .bib-Datei ohne die Endung
 	
 \end{document}
