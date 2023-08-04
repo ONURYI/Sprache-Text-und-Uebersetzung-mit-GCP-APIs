@@ -1,55 +1,66 @@
-\documentclass[a4paper, 11pt, toc=listof, toc=bib]{scrbook}
-
-% Vorlage fuer Abschlussarbeiten
-% Version 2023-06-30
-% Getestet mit TeX Live; Kodierung: UTF8
-
-% Hier Daten eintragen:
-\newcommand{\name}{Max Mustermann}
-\newcommand{\abschlussarbeit}{Bachelorarbeit}
-\newcommand{\hochschule}{Fachhochschule Südwestfalen}
-\newcommand{\datum}{\today}
-\newcommand{\titeldeutsch}{Deutscher Titel\\ der Abschlussarbeit}
-\newcommand{\titelenglisch}{Englischer Titel der Abschlussarbeit}
-\newcommand{\erstpruefer}{Prof. Dr. ???}
-\newcommand{\zweitpruefer}{Prof. Dr. ???}
-% Ende der Daten
-
-\usepackage[inner=25mm, outer=25mm, top=25mm, lines=50]{geometry}
+\documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{lmodern}
 \usepackage[ngerman]{babel}
-\usepackage[style=alphabetic, backend=biber, bibencoding=utf8]{biblatex}
-\addbibresource{literatur.bib}\usepackage{csquotes}
-\usepackage{scrlayer-scrpage}\lohead{\rightmark}\rehead{\leftmark}\ohead{\pagemark}
-\usepackage{booktabs}
-\usepackage{microtype}
 \usepackage{graphicx}
-\usepackage{scrhack}
-\clubpenalty=10000
-\widowpenalty=10000
-\displaywidowpenalty=10000
-\setlength{\parindent}{1.5em}
+\usepackage{lipsum} % Für Beispieltext
+\usepackage{booktabs} % Für Tabellen
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage[backend=biber,style=numeric]{biblatex}
 
-\usepackage{listings}
-\renewcommand{\lstlistingname}{Listing}
-\renewcommand{\lstlistlistingname}{Listingverzeichnis}
-\lstset{basicstyle=\small\ttfamily, breaklines=true, numbers=left, keepspaces=true, columns=fixed}
+% Pfad zur .bib-Datei mit Literaturquellen
+\addbibresource{references.bib}
 
 \begin{document}
-\frontmatter
-\include{frontmatter}
-\tableofcontents
-
-\mainmatter
-\ofoot*{}
-\include{mainmatter}
-
-\backmatter
-\printbibliography
-\listoffigures
-\listoftables
-\lstlistoflistings
-\include{erklaerung}
+	
+	% Titelseite
+	\begin{titlepage}
+		\begin{center}
+			\vspace*{1cm}
+			\Huge
+			 Sprache, Spracheingabe, Text \& Übersetzung mit Google Cloud APIs
+			
+			
+			\vspace{1.5cm}
+			\LARGE
+			M.Sc. Onur Yilmaz
+			
+			\vspace{1.5cm}
+			\Large
+			Angewandte Künstliche Intelligenz
+			
+			\vfill
+			
+			Schriftliche Ausarbeitung
+			
+			\vspace{0.8cm}
+			\Large
+			Betreuer: Prof. Dr. Giefers
+			
+			\vspace{0.5cm}
+			\large
+			Fachhochschule Südwestfalen
+			\today
+		\end{center}
+	\end{titlepage}
+	
+	% Inhaltsverzeichnis
+	\tableofcontents
+	\newpage
+	% Einleitung
+	\section{Einleitung}
+	\section{Transkription von Sprache zu Text mit der Cloud Speech API}
+	
+	\section{Messung und Verbesserung der Sprachgenauigkeit}
+	
+	\section{Textübersetzung mit der Cloud Translation API}
+	
+	\section{Text in Kategorien einordnen mit der Natural Language API}
+	
+	\section{Entitäten- und Gefühlsanalyse mit der Natural Language API}
+	
+	\section{Synthetische Sprache erstellen mit Text-to-Speech}
+	% Literaturverzeichnis
+	\printbibliography[title={Literaturverzeichnis}]
+	
 \end{document}
