@@ -4,6 +4,13 @@
 \usepackage{graphicx}
 \usepackage{booktabs} % Für Tabellen
 \usepackage{caption}
+\usepackage{amsmath}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, text width=6em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{arrow} = [thick,-,>=stealth]
+
 
 
 \usepackage[hypertexnames=false]{hyperref} % Hinzugefügte Option
@@ -30,14 +37,16 @@
 				\vfill
 				
 				Schriftliche Ausarbeitung - Cloud Computing
-				
-				\vspace{0.8cm}
-				\Large
-				Betreuer: Prof. Dr. Giefers
-				
 				\vspace{0.5cm}
 				\large
 				Fachhochschule Südwestfalen
+				\vspace{0.8cm}
+				\Large
+				\\
+				Gutachter: Prof. Dr. Giefers
+				\\
+				\vspace{0.5cm}
+				\large		
 				\today
 			\end{center}
 		\end{titlepage}
@@ -66,9 +75,58 @@ Die Arbeit dient nicht nur als theoretischer Überblick, sondern bietet auch pra
 
 \section{Grundlagen}
 \subsection{Was ist eine API}
-Eine API (Application Programming Interface) ist eine Schnittstelle, die es verschiedenen Softwareanwendungen ermöglicht, miteinander zu kommunizieren. Es handelt sich im Wesentlichen um eine Reihe von Regeln und Protokollen, die von den Entwicklern befolgt werden müssen, um auf die Funktionen eines Softwareprodukts zuzugreifen.
+Eine API (\textit{Application Programming Interface}) ist eine Schnittstelle, die es verschiedenen Softwareanwendungen ermöglicht, miteinander zu kommunizieren. Es handelt sich im Wesentlichen um eine Reihe von Regeln und Protokollen, die von den Entwicklern befolgt werden müssen, um auf die Funktionen eines Softwareprodukts zuzugreifen. APIs können in verschiedenen Formen existieren, wie z.B. Web-APIs, die über HTTP-Kommunikation arbeiten, oder als Bibliotheken und Frameworks für spezifische Programmiersprachen.
+
 \subsection{Erstellen eines API-Schlüssels}
+Ein API-Schlüssel ist ein eindeutiger Identifikator, der verwendet wird, um eine Anwendung zu authentifizieren, die auf die Funktionen einer API zugreifen möchte. Dieser Schlüssel dient als eine Art "Passwort", das sicherstellt, dass nur autorisierte Anwendungen Zugang zur API haben. Die genauen Schritte zum Erstellen eines API-Schlüssels können je nach Anbieter der API variieren, aber in der Regel beinhalten sie das Anmelden bei einem Entwicklerportal, das Erzeugen eines neuen Schlüssels über eine Benutzeroberfläche und das Kopieren dieses Schlüssels in die Anwendung, die die API nutzen wird.
+
 \subsection{Erstellen und Aufrufen der API-Anfrage}
+Um eine API-Anfrage zu erstellen, muss ein Entwickler eine HTTP-Anfrage (normalerweise GET oder POST) an die URL der API senden, zusammen mit allen erforderlichen Parametern und dem API-Schlüssel. Die Anfrage kann auch einen Anforderungskörper enthalten, der zusätzliche Daten zur Verarbeitung an die API sendet. Nach dem Senden der Anfrage wird die API diese verarbeiten und eine Antwort zurückgeben, normalerweise in Form einer JSON- oder XML-Datei, die die angeforderten Daten oder das Ergebnis der Verarbeitung enthält.
+
+\subsection{Interaktion mit der Google Cloud API}
+
+Der Prozess der Interaktion mit der Google Cloud API kann in vier grundlegende Schritte unterteilt werden:
+
+\begin{enumerate}
+	\item Der Entwickler sendet eine API-Anfrage von seiner Anwendung aus. Diese Anfrage enthält die erforderlichen Parameter und den API-Schlüssel. Ein Beispiel für eine solche Anfrage könnte folgendermaßen aussehen:
+	
+	\begin{verbatim}
+		GET /api/v1/resource?param=value&api_key=YOUR_API_KEY
+	\end{verbatim}
+	
+	\item Die Anfrage wird an die Google Cloud API gesendet, die auf einem Server von Google gehostet wird. Dies geschieht im Hintergrund durch die Netzwerkinfrastruktur und erfordert in der Regel keinen spezifischen Code.
+	
+	\item Die Google Cloud API verarbeitet die Anfrage. Dies kann beinhalten, dass sie auf Daten in einer Datenbank zugreift, Berechnungen durchführt oder andere Funktionen ausführt. Auch dies geschieht auf dem Server und ist für den Entwickler in der Regel nicht sichtbar.
+	
+	\item Die Google Cloud API sendet eine Antwort zurück an die Anwendung des Entwicklers. Diese Antwort enthält die Daten oder das Ergebnis, das der Entwickler angefordert hat. Eine typische Antwort könnte folgendermaßen aussehen:
+	
+	\begin{verbatim}
+		{
+			"status": "success",
+			"data": {
+				// The requested data or result of the operation
+			}
+		}
+	\end{verbatim}
+\end{enumerate}
+
+
+\begin{figure}[h]
+	\centering
+	\begin{tikzpicture}[node distance=2cm]
+		
+		\node (developer) [block] {Entwickler sendet API-Anfrage};
+		\node (api) [block, right of=developer, node distance=3cm] {Google Cloud API};
+		\node (response) [block, below of=api, node distance=2cm] {API sendet Antwort};
+		
+		\draw [arrow] (developer) -- (api);
+		\draw [arrow] (api) -- (response);
+		
+	\end{tikzpicture}
+	\caption{Interaktion mit der Google Cloud API}
+\end{figure}
+
+
 \newpage
 
 
@@ -77,11 +135,54 @@ Die Spracherkennung und -transkription, auch als \textit{Automatic Speech Recogn
 \subsection{Transkription von Sprache zu Text}
 Die Transkription von Sprache zu Text ist das Verfahren, bei dem Audiosignale, die menschliche Sprache enthalten, analysiert werden, um den entsprechenden Textinhalt zu erzeugen. Dies kann in vielen Anwendungen nützlich sein, von automatischen Untertiteln für Videos bis hin zur sprachbasierten Interaktion mit virtuellen Assistenten.
 
+\subsection{Schritte im Speech-to-Text Prozess}
 
-\subsection{Cloud Speach API}
+Der Prozess der Sprache-zu-Text-Transkription kann in mehrere Teilschritte zerlegt werden, darunter:
+
+\begin{enumerate}
+	\item \textbf{Vorverarbeitung oder Signalverarbeitung:} Hier wird das rohe Audiosignal in ein geeignetes Format für die weitere Verarbeitung umgewandelt. Dies kann das Filtern von Hintergrundgeräuschen oder das Aufteilen des Signals in kleinere Segmente, so genannte "Frames", umfassen.
+	\item \textbf{Merkmalsextraktion:} In diesem Schritt werden relevante Merkmale aus dem vorverarbeiteten Signal extrahiert. Diese Merkmale können die Lautstärke, den Ton und die Geschwindigkeit der Sprache umfassen. 
+	\item \textbf{Akustische Modellierung:} Hier wird das extrahierte Merkmalssignal mit einem akustischen Modell verglichen, das auf der Grundlage von Trainingsdaten erstellt wurde. Dieses Modell kann verwendet werden, um die wahrscheinlichsten Phonemsequenzen für das gegebene Signal zu bestimmen.
+	\item \textbf{Sprachmodellierung:} In diesem Schritt wird die erkannte Phonemsequenz in Worte und Sätze übersetzt. Dies geschieht mit Hilfe eines Sprachmodells, das Informationen über die Wahrscheinlichkeiten verschiedener Wort- und Satzstrukturen enthält.
+	\item \textbf{Dekodierung:} Der letzte Schritt besteht darin, die wahrscheinlichste Wortsequenz zu finden, die das erkannte Phonemsignal und das Sprachmodell erklärt. Dieser Schritt kann als ein Optimierungsproblem angesehen werden, bei dem das Ziel darin besteht, die Wortsequenz zu finden, die die Gesamtwahrscheinlichkeit maximiert.
+\end{enumerate}
+
 \subsection{Messung und Verbesserung der Sprachgenauigkeit}
 
+Die Genauigkeit einer Sprach-zu-Text-Transkription kann auf verschiedene Arten gemessen werden, und es kann nützlich sein, mehrere Metriken zu verwenden, abhängig von den spezifischen Anforderungen. Eine gängige Methode, die oft als Standard für Vergleiche herangezogen wird, ist die \textit{Word Error Rate} (WER). Die WER misst den Anteil der falsch transkribierten Wörter im gesamten Datensatz. Dies bedeutet, dass eine niedrigere WER eine höhere Transkriptionsgenauigkeit anzeigt.
+\\ \\
+Im Kontext der ASR-Genauigkeit wird häufig der Begriff \textit{Grundwahrheit} (Ground Truth) verwendet. Grundwahrheit bezeichnet die 100\% genaue (typischerweise menschliche) Transkription, mit der die Genauigkeit der maschinellen Transkription verglichen wird.
 
+\begin{itemize}
+	\item \textbf{Einfügefehler (I):} Dies bezieht sich auf Situationen, in denen Wörter, die nicht in der ursprünglichen, korrekten Transkription (der "Grundwahrheit") vorhanden sind, vom Spracherkennungssystem in das transkribierte Ergebnis eingefügt werden.
+	\item \textbf{Substitutionsfehler (S):} Dies tritt auf, wenn Wörter, die sowohl in der ursprünglichen Transkription als auch im transkribierten Ergebnis vorhanden sind, vom System nicht korrekt transkribiert werden. Hierbei wird ein Wort aus der Grundwahrheit durch ein anderes Wort im transkribierten Text ersetzt.
+	\item \textbf{Löschfehler (D):} Dies bezieht sich auf Wörter, die in der Grundwahrheit vorhanden sind, aber im transkribierten Text des Spracherkennungssystems fehlen.
+\end{itemize}
+
+Die Formel zur Berechnung der WER ist:
+
+\begin{align}
+\text{WER} = \frac{S + D + I}{N},
+\end{align}
+wobei \(N\) die Anzahl der Wörter in der Grundwahrheit (dem korrekten Text) ist.
+
+
+
+\subsection{Google Cloud Speech API}
+
+In diesem Abschnitt lernen wir nun verstehen wie eine Audiodatei zur Transkription an die Speech-to-Text API gesendet wird.
+
+\subsubsection*{\underline{Erstellen einer API-Anforderung}}
+
+Um eine Anforderung an die API zu senden, erstellen wir eine \texttt{request.json} Datei. Diese Datei enthält zwei Objekte: \texttt{config} und \texttt{audio}.
+\\ \\
+Im \texttt{config} Objekt teilen wir der Speech-to-Text API mit, wie die Anforderung verarbeitet werden soll. Der Parameter \texttt{encoding} gibt an, welche Art von Audiokodierung wir verwenden, und \texttt{languageCode} gibt die Sprache des Audiomaterials an.
+\\ \\
+Im \texttt{audio} Objekt übergeben wir der API die URI der Audiodatei, die in diesem Fall in Google Cloud Storage gespeichert ist.
+
+\subsubsection*{\underline{Aufrufen der Speech-to-Text API}}
+
+Wir senden die Anforderung zusammen mit dem API-Schlüssel an die API. Die Antwort der API wird in einer Datei namens \texttt{result.json} gespeichert. Diese enthält das transkribierte Audio sowie eine Konfidenzangabe, die angibt, wie sicher die API ist, dass sie das Audio korrekt transkribiert hat.
 
 
 \newpage
