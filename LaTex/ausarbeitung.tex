@@ -7,6 +7,29 @@
 \usepackage{amsmath}
 \usepackage{enumitem} % Paket für bessere Nummerierung
 \usepackage{csquotes} 
+
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Einstellungen für das 'listings'-Paket
+\lstset{
+	basicstyle=\footnotesize\ttfamily,
+	breaklines=true,
+	frame=single,
+	rulecolor=\color{gray},
+	language=Python,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{red},
+	numbers=left,
+	numberstyle=\tiny\color{gray},
+	captionpos=b,
+	keepspaces=true,
+	showstringspaces=false,
+	extendedchars=true
+}
+
  
 
 \usepackage{tikz}
@@ -15,7 +38,7 @@
 \tikzstyle{arrow} = [thick,-,>=stealth]
 
 
-
+\usepackage{tikz}
 \usepackage{hyperref} % Hinzugefügte Option
 
 \usepackage[backend=biber, style=numeric]{biblatex}
@@ -77,18 +100,86 @@ Die Arbeit dient nicht nur als theoretischer Überblick, sondern bietet auch pra
 
 	
 \newpage
+
 \section{Grundlagen}
-\subsection{Was ist eine API?}
-\subsubsection{Definition und Funktion einer API}
+\subsection{Einführung in Cloud Computing}
+Cloud Computing bezeichnet das Angebot und die Nutzung von IT Infrastrukturen und Anwendungen, die nicht lokal auf dem eigenen Computer, sondern in einem Netzwerk, meistens dem Internet, ausgeführt werden. Durch Cloud Computing können Unternehmen, aber auch Einzelpersonen Speicherplatz, Rechenleistung oder Softwareanwendungen als Service über das Internet nutzen.
+\\	\\
+Eine der Hauptanwendungen von Cloud Computing in der heutigen Zeit ist die Datenverarbeitung. Besonders hervorzuheben ist hier die Verwendung von Cloud-Plattformen für Natural Language Processing (NLP), da sie die Fähigkeit bieten, große Mengen an Textdaten effizient zu analysieren und zu verarbeiten. Nachfolgend wird speziell auf die Möglichkeiten und Dienste der Google Cloud Platform eingegangen.
+\subsubsection{Was ist eine API und ihre Funktion?}
+Wenn man über NLP in der Cloud spricht, ist eine der Hauptinteraktionen die Verwendung von APIs. Zum Beispiel bietet OpenAI, der Entwickler von ChatGPT, ein Cloud-basiertes API-Interface für sein Modell an.
+\\ \\
+Eine API (Application Programming Interface) dient als Schnittstelle, die es Entwicklern ermöglicht, bestimmte Funktionen eines Programms oder einer Plattform zu nutzen, ohne sich mit den internen Details auseinandersetzen zu müssen. 
+\\ \\
+Im Kontext von NLP könnte eine API es ermöglichen, Textdaten zu senden und als Antwort eine Analyse oder Übersetzung dieses Textes zu erhalten.
+	
+	\begin{center}
+		\begin{tikzpicture}
+			\node[draw, rectangle, fill=blue!20, minimum width=1cm, minimum height=1cm] (app) {NLP-Anwendung};
+			\node[draw, rectangle, fill=red!20, minimum width=1cm, minimum height=1cm, right=of app, xshift=2cm] (api) {OpenAI API};
+			\node[draw, rectangle, fill=green!20, minimum width=1cm, minimum height=1cm, right=of api, xshift=2cm] (server) {NLP-Modell};
+			
+			\draw[->] (app) -- (api) node[midway, above] {Texteingabe};
+			\draw[->] (api) -- (server) node[midway, above] {Verarbeitung};
+			\draw[->] (server) -- (api) node[midway, below] {Antwort};
+			\draw[->] (api) -- (app) node[midway, below] {Analyse};
+		\end{tikzpicture}
+	\end{center}
+	
 \subsubsection{Bedeutung von API-Keys}
+
+API-Keys sind ein wesentlicher Bestandteil vieler Webanwendungen und Cloud-Dienste. Sie dienen als Identifikator für den Benutzer oder Entwickler und stellen sicher, dass die Anfrage autorisiert ist. Durch den API-Key kann der Serviceanbieter den Zugriff auf seine Ressourcen kontrollieren, den Verbrauch überwachen und gegebenenfalls Gebühren erheben.
+
 \subsection{Erstellen und Aufrufen der API-Anfrage}
 \subsubsection{Grundlagen des API-Aufrufs}
 \subsubsection{Spezifikationen und Parameter}
-\subsection{Interaktion mit der Google Cloud API}
-\subsubsection{Einführung in Cloud Computing}
-\subsubsection{Umgang mit dem Google Cloud Dienst}
-\subsubsection{Erstellen eines API-Keys in Google Cloud}
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+\subsection{Interaktion mit der Google Cloud API}
+\subsubsection{Umgang mit dem Google Cloud Dienst}	
+Die Google Cloud bietet eine Vielzahl von Diensten, darunter auch Machine Learning und NLP. Wie bei anderen Cloud-Anbietern auch, benötigen Nutzer einen API-Key, um auf diese Dienste zuzugreifen.
+\subsubsection{Erstellen eines API-Keys in Google Cloud}
+Um einen API-Key in der Google Cloud zu erstellen, muss man sich zuerst in der Google Cloud Console anmelden. Dann wählt man das gewünschte Projekt aus oder erstellt ein neues. Unter den \enquote{Credentials}-Optionen kann man dann einen neuen API-Key erstellen. Es ist wichtig, den generierten Schlüssel sicher aufzubewahren und nicht öffentlich zugänglich zu machen, da er den Zugriff auf Cloud-Ressourcen und möglicherweise auch Abrechnungsinformationen ermöglicht.
+	
 
 
 
