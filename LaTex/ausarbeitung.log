@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.1)  10 AUG 2023 12:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.1)  10 AUG 2023 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -738,26 +738,77 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--75
 
  []
 
-[2] [3] [4] [5] [6] [7] (./ausarbeitung.bbl) [8] (./ausarbeitung.aux)
-Package rerunfilecheck Info: File `ausarbeitung.out' has not changed.
-(rerunfilecheck)             Checksum: BFBD2D957A02622A69DDDABF63A15CFE;3164.
+[2]
+Overfull \hbox (1.8847pt too wide) in paragraph at lines 92--92
+[]\OT1/cmr/bx/n/12 Einf[]uhrung in Na-tu-ral Lan-gua-ge Pro-ces-sing (NLP) mit 
+Goo-
+ []
+
+[3] [4] [5] [6] [7] (./ausarbeitung.bbl) [8] (./ausarbeitung.aux)
+
+Package rerunfilecheck Warning: File `ausarbeitung.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `ausarbeitung.out':
+(rerunfilecheck)             Before: C9D6AC3FBF5CD40A7C7C48E0922A5503;3178
+(rerunfilecheck)             After:  25E7FA5D3F5B626288CA5F25154684BD;5178.
  ) 
 Here is how much of TeX's memory you used:
- 22842 strings out of 478287
- 426429 string characters out of 5849290
- 712669 words of memory out of 5000000
- 40650 multiletter control sequences out of 15000+600000
+ 22865 strings out of 478287
+ 426737 string characters out of 5849290
+ 713669 words of memory out of 5000000
+ 40651 multiletter control sequences out of 15000+600000
  475132 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,5n,89p,421b,401s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on ausarbeitung.pdf (9 pages, 74969 bytes).
+pdfTeX warning (dest): name{subsection.18} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.17} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.15} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.14} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.13} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.12} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.11} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.10} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.9} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.8} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.6} has been referenced but does not exis
+t, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.5} has been referenced but does not exis
+t, replaced by a fixed one
+
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on ausarbeitung.pdf (9 pages, 78187 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 141 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 194 PDF objects out of 1000 (max. 8388607)
+ 173 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 
