@@ -86,7 +86,7 @@
 \section*{Einleitung}
 In dieser Arbeit werden Technologien und Anwendungen aus dem Bereich der Sprach- und Textverarbeitung beleuchtet, die auf Google Cloud-Diensten aufbauen. Hierzu gehören die \textit{Cloud Speech API}, die \textit{Cloud Translation API}, die \textit{Natural Language API} und die \textit{Text-to-Speech API} \cite{googlecloudskills2023}.
 \\ \\
-Im Abschnitt über die \textit{Grundlagen} wird eine Einführung in die Konzepte des Cloud Computings, der API und des Umgangs mit dem Google Cloud Dienst gegeben. Hierbei wird insbesondere auf die Themen API und API-Keys sowie Natural Language Processing (NLP) eingegangen.
+Im Abschnitt über die \textit{Grundlagen} wird eine Einführung in die Konzepte des Cloud Computings, der API und des Umgangs mit dem Google Cloud Dienst gegeben. 
 \\ \\
 Der Abschnitt \textit{Spracherkennung und -transkription} fokussiert sich auf die \textit{Cloud Speech API}, die die Transkription von Audio in Text ermöglicht, und die Methoden zur Messung und Verbesserung der Sprachgenauigkeit.
 \\ \\
@@ -105,14 +105,14 @@ Die Arbeit dient nicht nur als theoretischer Überblick, sondern bietet auch pra
 \subsection{Einführung in Cloud Computing}
 Cloud Computing bezeichnet das Angebot und die Nutzung von IT Infrastrukturen und Anwendungen, die nicht lokal auf dem eigenen Computer, sondern in einem Netzwerk, meistens dem Internet, ausgeführt werden. Durch Cloud Computing können Unternehmen, aber auch Einzelpersonen Speicherplatz, Rechenleistung oder Softwareanwendungen als Service über das Internet nutzen.
 \\	\\
-Eine der Hauptanwendungen von Cloud Computing in der heutigen Zeit ist die Datenverarbeitung. Besonders hervorzuheben ist hier die Verwendung von Cloud-Plattformen für Natural Language Processing (NLP), da sie die Fähigkeit bieten, große Mengen an Textdaten effizient zu analysieren und zu verarbeiten. Nachfolgend wird speziell auf die Möglichkeiten und Dienste der Google Cloud Platform eingegangen.
+Eine der Hauptanwendungen von Cloud Computing in der heutigen Zeit ist die Datenverarbeitung. Besonders hervorzuheben ist hier die Verwendung von Cloud-Plattformen für Natural Language Processing (NLP) Anwendungen, da sie die Fähigkeit bieten, große Mengen an Textdaten effizient zu analysieren und zu verarbeiten. 
 \subsubsection{Was ist eine API und ihre Funktion?}
 Wenn man über Cloud spricht, ist eine der Hauptinteraktionen die Verwendung von APIs. 
 \\ \\
 Eine API (Application Programming Interface) dient als Schnittstelle, die es Entwicklern ermöglicht, bestimmte Funktionen eines Programms oder einer Plattform zu nutzen, ohne sich mit den internen Details auseinandersetzen zu müssen. 
 
 \subsubsection{Bedeutung von API-Keys}
-\textit{API-Keys} sind ein wesentlicher Bestandteil vieler Webanwendungen und Cloud-Dienste. Sie dienen als Identifikator für den Benutzer oder Entwickler und stellen sicher, dass die Anfrage autorisiert ist. Durch den API-Key kann der Serviceanbieter den Zugriff auf seine Ressourcen kontrollieren, den Verbrauch überwachen und gegebenenfalls Gebühren erheben.
+\textit{API-Keys} sind ein wesentlicher Bestandteil vieler Webanwendungen und Cloud-Dienste. Sie dienen als Identifikator für den Benutzer oder Entwickler und stellen sicher, dass die Anfrage autorisiert ist. Durch den API-Key kann der Serviceanbieter den Zugriff auf seine Ressourcen kontrollieren und den Verbrauch überwachen.
 
 \newpage
 \subsection{Erstellen und Aufrufen der API-Anfrage}
@@ -146,7 +146,9 @@ Im Kontext von NLP könnte eine API es ermöglichen, Textdaten zu senden und als
 \end{center}
 
 \subsubsection{Grundlagen des API-Aufrufs}
-Eine API-Anfrage ist eine Aufforderung an einen Server, eine bestimmte Aktion auszuführen oder Daten bereitzustellen. Um zu verstehen, wie eine solche Anfrage aufgebaut ist, betrachten wir ihre Hauptbestandteile:
+Eine API-Anfrage ist eine Aufforderung an einen Server, eine bestimmte Aktion auszuführen oder Daten bereitzustellen. 
+\\ \\
+Um zu verstehen, wie eine solche Anfrage aufgebaut ist, betrachten wir ihre Hauptbestandteile:
 \begin{enumerate}
 	\item[i] \textbf{Endpoint (URL)}: Dies ist die Webadresse, an die die Anfrage gesendet wird. Man kann es sich wie eine spezielle Telefonnummer vorstellen, die nur für bestimmte Dienste oder Informationen reserviert ist.
 	\item[ii] \textbf{HTTP-Methode}: Dies bestimmt, welche Art von Aktion wir vom Server verlangen. Die gängigsten Methoden sind GET (um Daten abzurufen), POST (um neue Daten zu senden) und PUT (um bestehende Daten zu aktualisieren).
@@ -164,12 +166,14 @@ Zum Beispiel, wenn wir Daten über einen bestimmten Benutzer von einer API abruf
 import requests
 	
 url = "https://api.example.com/userinfo"
-	headers = {
-		"Authorization": "Bearer your_auth_token_here"
-	}
-	params = {
-		"benutzerID": "12345"
-	}
+
+headers = {
+	         "Authorization": "auth_token_here"
+         }
+     
+params = {
+	        "benutzerID": "12345"
+        }
 
 response = requests.get(url, headers=headers, params=params)
 	
@@ -190,24 +194,6 @@ In obigen Python-Beispiel wird die Bibliothek \texttt{requests} verwendet, um ei
 \end{itemize}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
 \subsection{Interaktion mit der Google Cloud API}
 \subsubsection{Umgang mit dem Google Cloud Dienst}	
 \subsubsection{Erstellen eines API-Keys in Google Cloud}
