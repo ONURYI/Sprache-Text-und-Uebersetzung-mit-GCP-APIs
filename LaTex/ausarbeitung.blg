@@ -1,49 +1,15 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/dev/Debian)
-Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: ausarbeitung.aux
-The style file: plain.bst
-Database file #1: references.bib
-Warning--entry type for "google" isn't style-file defined
---line 1 of file references.bib
-You've used 1 entry,
-            2118 wiz_defined-function locations,
-            501 strings with 4088 characters,
-and the built_in function-call counts, 217 in all, are:
-= -- 17
-> -- 7
-< -- 0
-+ -- 3
-- -- 2
-* -- 8
-:= -- 41
-add.period$ -- 2
-call.type$ -- 1
-change.case$ -- 4
-chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 7
-empty$ -- 23
-format.name$ -- 2
-if$ -- 44
-int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 0
-newline$ -- 7
-num.names$ -- 2
-pop$ -- 9
-preamble$ -- 1
-purify$ -- 3
-quote$ -- 0
-skip$ -- 8
-stack$ -- 0
-substring$ -- 5
-swap$ -- 1
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 2
-width$ -- 2
-write$ -- 10
-(There was 1 warning)
+[0] Config.pm:307> INFO - This is Biber 2.17
+[0] Config.pm:310> INFO - Logfile is 'ausarbeitung.blg'
+[88] biber:340> INFO - === Do Aug 10, 2023, 13:37:55
+[106] Biber.pm:418> INFO - Reading 'ausarbeitung.bcf'
+[178] Biber.pm:972> INFO - Found 1 citekeys in bib section 0
+[192] Biber.pm:4383> INFO - Processing section 0
+[205] Biber.pm:4574> INFO - Looking for bibtex file 'references.bib' for section 0
+[206] bibtex.pm:1713> INFO - LaTeX decoding ...
+[210] bibtex.pm:1518> INFO - Found BibTeX data source 'references.bib'
+[258] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[258] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[258] Biber.pm:4203> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[258] Biber.pm:4209> INFO - No sort tailoring available for locale 'de-DE'
+[264] bbl.pm:654> INFO - Writing 'ausarbeitung.bbl' with encoding 'UTF-8'
+[265] bbl.pm:757> INFO - Output to ausarbeitung.bbl
