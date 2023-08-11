@@ -104,98 +104,97 @@ Die Arbeit dient nicht nur als theoretischer Überblick, sondern bietet auch pra
 \section{Grundlagen}
 \subsection{Einführung in Cloud Computing}
 Cloud Computing bezeichnet das Angebot und die Nutzung von IT Infrastrukturen und Anwendungen, die nicht lokal auf dem eigenen Computer, sondern in einem Netzwerk, meistens dem Internet, ausgeführt werden. Durch Cloud Computing können Unternehmen, aber auch Einzelpersonen Speicherplatz, Rechenleistung oder Softwareanwendungen als Service über das Internet nutzen.
-\\	\\
-Eine der Hauptanwendungen von Cloud Computing in der heutigen Zeit ist die Datenverarbeitung. Besonders hervorzuheben ist hier die Verwendung von Cloud-Plattformen für Natural Language Processing (NLP) Anwendungen, da sie die Fähigkeit bieten, große Mengen an Textdaten effizient zu analysieren und zu verarbeiten. 
-\subsubsection{Was ist eine API und ihre Funktion?}
-Wenn man über Cloud spricht, ist eine der Hauptinteraktionen die Verwendung von APIs. 
 \\ \\
-Eine API (Application Programming Interface) dient als Schnittstelle, die es Entwicklern ermöglicht, bestimmte Funktionen eines Programms oder einer Plattform zu nutzen, ohne sich mit den internen Details auseinandersetzen zu müssen. 
+Eine der Hauptanwendungen von Cloud Computing in der heutigen Zeit ist die Datenverarbeitung. Besonders hervorzuheben ist hier die Verwendung von Cloud-Plattformen für Natural Language Processing (NLP) Anwendungen, da sie die Fähigkeit bieten, große Mengen an Textdaten effizient zu analysieren und zu verarbeiten.
+
+\subsection{Einführung in APIs}
+Wenn man über Cloud spricht, ist eine der Hauptinteraktionen die Verwendung von APIs. Eine API (Application Programming Interface) dient als Schnittstelle, die es Entwicklern ermöglicht, bestimmte Funktionen eines Programms oder einer Plattform zu nutzen, ohne sich mit den internen Details auseinandersetzen zu müssen.
 
 \subsubsection{Bedeutung von API-Keys}
 \textit{API-Keys} sind ein wesentlicher Bestandteil vieler Webanwendungen und Cloud-Dienste. Sie dienen als Identifikator für den Benutzer oder Entwickler und stellen sicher, dass die Anfrage autorisiert ist. Durch den API-Key kann der Serviceanbieter den Zugriff auf seine Ressourcen kontrollieren und den Verbrauch überwachen.
 
-\newpage
 \subsection{Erstellen und Aufrufen der API-Anfrage}
-Das Aufrufen einer API, oft als \enquote{API-Anfrage" bezeichnet} (\textit{im engl. request}), ist der Prozess, bei dem ein Programm oder eine Anwendung eine Anforderung an einen Server sendet und eine Antwort zurückerhält.
+Das Aufrufen einer API, oft als \enquote{API-Anfrage} bezeichnet (\textit{im engl. request}), ist der Prozess, bei dem ein Programm oder eine Anwendung eine Anforderung an einen Server sendet und eine Antwort zurückerhält.
 
-\ \\ \\
-\begin{tikzpicture}
-	% Anwendung
-	\node[draw,rectangle,minimum width=3cm,minimum height=2cm] (app) {Anwendung};
-	% API-Server
-	\node[draw,rectangle,minimum width=3cm,minimum height=2cm, right=5cm of app] (api) {API-Server};
-	
-	% Pfeile für Anfrage und Antwort
-	\draw[->, thick] (app.east) -- node[above]{Anfrage} (api.west);
-	\draw[->, thick] (api.west) -- node[below]{Antwort} (app.east);
-\end{tikzpicture}
-\ \\ \\
-Im Kontext von NLP könnte eine API es ermöglichen, Textdaten zu senden und als Antwort eine Analyse oder Übersetzung dieses Textes zu erhalten.
-\ \\
 \begin{center}
 	\begin{tikzpicture}
-		\node[draw, rectangle, fill=blue!20, minimum width=1cm, minimum height=1cm] (app) {NLP-Anwendung};
-		\node[draw, rectangle, fill=red!20, minimum width=1.5cm, minimum height=1.5cm, right=of app, xshift=2cm] (api) {API};
-		\node[draw, rectangle, fill=green!20, minimum width=1cm, minimum height=1cm, right=of api, xshift=2cm] (server) {NLP-Modell};
+		% Anwendung
+		\node[draw,rectangle,minimum width=3cm,minimum height=2cm] (app) {Anwendung};
+		% API-Server
+		\node[draw,rectangle,minimum width=3cm,minimum height=2cm, right=5cm of app] (api) {API-Server};
 		
-		\draw[->] (app) -- (api) node[midway, above] {Texteingabe};
-		\draw[->] (api) -- (server) node[midway, above] {Verarbeitung};
-		\draw[->] (server) -- (api) node[midway, below] {Antwort};
-		\draw[->] (api) -- (app) node[midway, below] {Analyse};
+		% Pfeile für Anfrage und Antwort
+		\draw[->, thick] (app.east) -- node[above]{Anfrage} (api.west);
+		\draw[->, thick] (api.west) -- node[below]{Antwort} (app.east);
 	\end{tikzpicture}
 \end{center}
 
+Im Kontext von NLP könnte eine API es ermöglichen, Textdaten zu senden und als Antwort eine Analyse oder Übersetzung dieses Textes zu erhalten.
+
 \subsubsection{Grundlagen des API-Aufrufs}
-Eine API-Anfrage ist eine Aufforderung an einen Server, eine bestimmte Aktion auszuführen oder Daten bereitzustellen. 
-\\ \\
-Um zu verstehen, wie eine solche Anfrage aufgebaut ist, betrachten wir ihre Hauptbestandteile:
+Eine API-Anfrage ist eine Aufforderung an einen Server, eine bestimmte Aktion auszuführen oder Daten bereitzustellen. Um zu verstehen, wie eine solche Anfrage aufgebaut ist, betrachten wir ihre Hauptbestandteile:
 \begin{enumerate}
-	\item[i] \textbf{Endpoint (URL)}: Dies ist die Webadresse, an die die Anfrage gesendet wird. Man kann es sich wie eine spezielle Telefonnummer vorstellen, die nur für bestimmte Dienste oder Informationen reserviert ist.
-	\item[ii] \textbf{HTTP-Methode}: Dies bestimmt, welche Art von Aktion wir vom Server verlangen. Die gängigsten Methoden sind GET (um Daten abzurufen), POST (um neue Daten zu senden) und PUT (um bestehende Daten zu aktualisieren).
-	\item[iii]  \textbf{Header}: Zusätzliche Informationen, die mit der Anfrage gesendet werden. Hier können z.B. Anmeldedaten für den Server oder spezifische Anweisungen zur Datenverarbeitung enthalten sein.
-	\item[iv]  \textbf{Body}: Bei manchen Anfragen, wie z.B. POST oder PUT, schicken wir dem Server Daten im Body der Anfrage.
+	\item[i] \textbf{Endpoint (URL)}
+	\item[ii] \textbf{HTTP-Methode}
+	\item[iii]  \textbf{Header}
+	\item[iv]  \textbf{Body}
 \end{enumerate}
 
 \subsubsection{Spezifikationen und Parameter}
-Jeder Server oder Dienst kann mehrere Endpunkte haben, die unterschiedliche Arten von Daten oder Funktionen bedienen. Um die richtige Information oder Funktion zu erreichen, benötigen wir oft zusätzliche Details oder Parameter. Diese Parameter helfen dem Server, unsere Anfrage besser zu verstehen und die gewünschten Daten oder Dienste bereitzustellen.
-\newline
-\newline
-Zum Beispiel, wenn wir Daten über einen bestimmten Benutzer von einer API abrufen möchten, könnten wir eine Benutzer-ID als Parameter in der URL oder im Body der Anfrage übergeben.
-\ \\
+Jeder Server oder Dienst kann mehrere Endpunkte haben, die unterschiedliche Arten von Daten oder Funktionen bedienen. Um die richtige Information oder Funktion zu erreichen, benötigen wir oft zusätzliche Details oder Parameter.
+
 \begin{lstlisting}[language=Python, numbers = none]
-import requests
+	import requests
 	
-url = "https://api.example.com/userinfo"
-
-headers = {
-	         "Authorization": "auth_token_here"
-         }
-     
-params = {
-	        "benutzerID": "12345"
-        }
-
-response = requests.get(url, headers=headers, params=params)
+	url = "https://api.example.com/userinfo"
+	headers = {
+		"Authorization": "auth_token_here"
+	}
 	
-if  response.status_code == 200:
-    benutzer_daten = response.json()
-    print(benutzer_daten)
-else:
-    print("Es gab ein Problem:", response.status_code)
+	params = {
+		"benutzerID": "12345"
+	}
+	
+	response = requests.get(url, headers=headers, params=params)
+	
+	if  response.status_code == 200:
+	benutzer_daten = response.json()
+	print(benutzer_daten)
+	else:
+	print("Es gab ein Problem:", response.status_code)
 \end{lstlisting}
-\ \\
-In obigen Python-Beispiel wird die Bibliothek \texttt{requests} verwendet, um eine HTTP-Anfrage an eine API zu senden.
+
+\subsection{Von APIs zu RESTful APIs}
+Innerhalb dieses Rahmens existiert eine spezielle Kategorie von APIs, die als \textit{RESTful APIs} bezeichnet werden. RESTful APIs nutzen das Internetprotokoll HTTP und nehmen seine Konventionen an, um eine klare Kommunikation zwischen Client und Server zu ermöglichen.
+
+Ein signifikanter Vorteil von RESTful APIs ist ihre Zustandslosigkeit, die eine hohe Skalierbarkeit ermöglicht. 
+
+Zum Beispiel:
+
 \begin{itemize}
-	\item Der String \texttt{url} enthält den Endpoint, d.h. den spezifischen Ort auf einem Webserver, an den unsere Anfrage gesendet wird.
-	\item Im Dictionary \texttt{headers} speichern wir Anmeldeinformationen, die dem Server mitteilen, dass wir autorisiert sind, auf die gewünschten Daten zuzugreifen.
-	\item Das Dictionary \texttt{params} enthält Parameter, die den Zweck unserer Anfrage spezifizieren. Hier bitten wir um Informationen über einen Benutzer mit der ID "12345".
-	\item Die Methode \texttt{requests.get()} sendet eine GET-Anfrage an den in \texttt{url} angegebenen Server, wobei die zuvor definierten Header und Parameter verwendet werden.
-	\item Schließlich überprüft der Code den Status der Antwort. Wenn der Statuscode 200  zurückgegeben wird, werden die Daten des Benutzers extrahiert und gedruckt. Andernfalls wird eine Fehlermeldung ausgegeben.
+	\item Ein Aufruf von \texttt{getUsers()} in einer traditionellen API könnte in einer RESTful API als ein einfacher GET-Aufruf an die URL \texttt{/users} übersetzt werden.
+	\item Das Hinzufügen eines neuen Benutzers, das in einer traditionellen API vielleicht durch \texttt{addUser()} repräsentiert wird, könnte in einer RESTful API durch eine POST-Anfrage an \texttt{/users} dargestellt werden.
 \end{itemize}
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \subsection{Interaktion mit der Google Cloud API}
-\subsubsection{Umgang mit dem Google Cloud Dienst}	
+\subsubsection{Umgang mit dem Google Cloud Dienst}
 \subsubsection{Erstellen eines API-Keys in Google Cloud}
 
 
