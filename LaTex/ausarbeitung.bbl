@@ -19,6 +19,93 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{classtext2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4e595bd8646c01df540ff38696a35be}{%
+           family={Cloud},
+           familyi={C\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 08. August 2023}
+      \field{title}{Classify Text into Categories with the Natural Language API}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cloudskillsboost.google/focuses/1749?parent=catalog
+      \endverb
+      \verb{url}
+      \verb https://www.cloudskillsboost.google/focuses/1749?parent=catalog
+      \endverb
+    \endentry
+    \entry{texttospeech2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4e595bd8646c01df540ff38696a35be}{%
+           family={Cloud},
+           familyi={C\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{2}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 08. August 2023}
+      \field{title}{Create Synthetic Speech Using Text-to-Speech}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cloudskillsboost.google/focuses/1290?parent=catalog
+      \endverb
+      \verb{url}
+      \verb https://www.cloudskillsboost.google/focuses/1290?parent=catalog
+      \endverb
+    \endentry
+    \entry{entitysentiment2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4e595bd8646c01df540ff38696a35be}{%
+           family={Cloud},
+           familyi={C\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 08. August 2023}
+      \field{title}{Entity and Sentiment Analysis with the Natural Language API}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cloudskillsboost.google/focuses/1843?parent=catalog
+      \endverb
+      \verb{url}
+      \verb https://www.cloudskillsboost.google/focuses/1843?parent=catalog
+      \endverb
+    \endentry
     \entry{googlecloudskills2023}{online}{}
       \name{author}{1}{}{%
         {{hash=b4e595bd8646c01df540ff38696a35be}{%
@@ -33,6 +120,7 @@
       \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{4}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -45,6 +133,93 @@
       \endverb
       \verb{url}
       \verb https://www.cloudskillsboost.google/quests/179
+      \endverb
+    \endentry
+    \entry{speechaccuracy2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4e595bd8646c01df540ff38696a35be}{%
+           family={Cloud},
+           familyi={C\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{5}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 08. August 2023}
+      \field{title}{Measuring and Improving Speech Accuracy}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cloudskillsboost.google/focuses/13597?parent=catalog
+      \endverb
+      \verb{url}
+      \verb https://www.cloudskillsboost.google/focuses/13597?parent=catalog
+      \endverb
+    \endentry
+    \entry{speechtotext2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4e595bd8646c01df540ff38696a35be}{%
+           family={Cloud},
+           familyi={C\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 08. August 2023}
+      \field{title}{Speech to Text Transcription with the Cloud Speech API}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cloudskillsboost.google/focuses/2187?parent=catalog
+      \endverb
+      \verb{url}
+      \verb https://www.cloudskillsboost.google/focuses/2187?parent=catalog
+      \endverb
+    \endentry
+    \entry{cloudtranslation2023}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b4e595bd8646c01df540ff38696a35be}{%
+           family={Cloud},
+           familyi={C\bibinitperiod},
+           given={Google},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
+      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
+      \field{extraname}{7}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 08. August 2023}
+      \field{title}{Translate Text with the Cloud Translation API}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cloudskillsboost.google/focuses/697?parent=catalog
+      \endverb
+      \verb{url}
+      \verb https://www.cloudskillsboost.google/focuses/697?parent=catalog
       \endverb
     \endentry
     \entry{giefers2023cloud}{misc}{}
