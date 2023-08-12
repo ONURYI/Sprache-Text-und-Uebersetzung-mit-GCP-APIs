@@ -254,11 +254,28 @@ Nachdem wir uns den obigen JSON-Code erstellt haben, werfen wir einen Blick übe
 	
 	\item \enquote{uri}: \enquote{gs://cloud-samples-data/speech/brooklyn\_bridge.flac}: Dies ist die URI (Uniform Resource Identifier) oder der Pfad zum Audiofile. In diesem Fall handelt es sich um eine Audioaufnahme der Brooklyn Bridge im FLAC-Format, die in der Google Cloud Storage (gs) gespeichert ist.
 \end{itemize}
-
 \end{enumerate}
+
+
 \subsubsection{Aufrufen der API}
+Um die API aufzurufen, müssen Sie den Anfragekörper zusammen mit der API-Schlüssel-Umgebungsvariable an die API übergeben. Dies kann mit dem folgenden \texttt{curl}-Befehl erledigt werden (alles in einer einzelnen Befehlszeile):
 
-
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{../images/curl}
+	\caption{}
+\end{figure}
+Hier noch einmal übersichtlich dargestellt:
+\begin{verbatim}
+curl -s -X POST -H "Content-Type: application/json" 
+--data-binary @request.json \
+"https://speech.googleapis.com/v1/speech:recognize?key=${API_KEY}" 
+> result.json
+\end{verbatim}
+\ \\
+Es handelt sich um einen \texttt{curl}-Befehl, der eine POST-Anfrage an die Google Cloud Speech-to-Text API sendet. Die Optionen \texttt{-s} und \texttt{-X POST} setzen den Befehl auf den silent-Modus und legen die Anfragemethode auf POST fest. Der Header \texttt{"Content-Type: application/json"} gibt den Medientyp der Anfrage an. Die Option \texttt{--data-binary @request.json} überträgt den Inhalt der Datei \texttt{request.json} als Anfragekörper. Die URL enthält den Endpunkt der API, und der Platzhalter \texttt{\${API\_KEY}} wird durch den tatsächlichen API-Schlüssel ersetzt. Anschließend wird die Antwort der API in einer Datei namens \texttt{result.json} gespeichert.
+\\ \\
+Die Ausgaben
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
