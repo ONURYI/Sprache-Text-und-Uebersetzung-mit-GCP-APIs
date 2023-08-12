@@ -59,7 +59,7 @@
 			\begin{center}
 				\vspace*{1cm}
 				\Huge
-				Sprache, Sprachverarbeitung, Text \& Übersetzung mit Google Cloud APIs
+				Spracherkennung, Übersetzung und Textanalyse mit Google Cloud APIs
 				
 				
 				\vspace{1.5cm}
@@ -340,7 +340,7 @@ Ausgabe:
 	\verb|confidence: 0.9821605682373047|
 \textit{}\end{center}
 \  \\ 
-Zum Vergleich, schauen wir uns nun einmal das von OpenAI bereitgestellte ASR Modell, namens \textbf{\textit{Whisper AI}}(siehe \cite{radford2023robust}) an, welche mithilfe des Paketverwalters pip von Python installiert werden:
+Zum Vergleich, schauen wir uns nun einmal das von OpenAI bereitgestellte ASR Modell, namens \textbf{\textit{Whisper AI}}(zugehörige Paper siehe \cite{radford2023robust}) an, welche mithilfe des Paketverwalters pip von Python installiert werden:
 
 \begin{verbatim}
 !pip install git+https://github.com/openai/whisper.git 
@@ -369,16 +369,15 @@ Und erhalten die folgende Ausgabe
 		'language': 'en'}
 \end{verbatim}
 \ \\
-Wir sind auch hier das die Sprache richtig transkripiert wird, jedoch die \textit{confidence}.
-
-
+Hier erkennen wir, dass die Sprache präzise transkribiert wird und auch die korrekte Groß- und Kleinschreibung berücksichtigt wird. Allerdings fehlt uns eine Einschätzung der \textit{Confidence} seitens des Modells.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section{Sprachübersetzung}
 
-In diesem Abschnitt wird die Erkennung und Übersetzung von Texten behandelt, um verschiedene Sprachen zu übersetzen. Hierbei wird auf die Möglichkeiten der Cloud Translation API von Google Cloud eingegangen \cite{cloudtranslation2023}.
+In diesem Abschnitt wird nun die Erkennung und Übersetzung von Texten behandelt, um verschiedene Sprachen zu übersetzen. Hierbei wird auf die Möglichkeiten der C\textit{loud Translation API} von Google Cloud eingegangen \cite{cloudtranslation2023}.
 \subsection{Erkennung und Übersetzung von Texten}
+
 \subsection{Cloud Translation API}
 \newpage
 
@@ -393,10 +392,6 @@ Durch die Entitäten- und Sentimentanalyse gewinnen wir tiefere Einblicke in die
 
 \newpage
 
-\section{Sprachsynthese}
-Die Erzeugung synthetischer Sprache mittels Text-to-Speech-Technologie wird in diesem Abschnitt behandelt. Dabei wird beschrieben, wie die Natural Language API von Google Cloud genutzt werden kann, um aus Texten künstliche Sprachausgaben zu erzeugen \cite{texttospeech2023}.
-\subsection{Erzeugung synthetischer Sprache}
-\subsection{Natural Language API}
 
 
 

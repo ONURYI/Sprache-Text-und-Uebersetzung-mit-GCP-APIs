@@ -18,6 +18,3 @@
 \contentsline {subsection}{\numberline {4.1}Klassifizierung von Text in Kategorien}{15}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Entitäten- und Sentimentanalyse}{15}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Natural Language API}{15}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Sprachsynthese}{16}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Erzeugung synthetischer Sprache}{16}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Natural Language API}{16}{subsection.5.2}%
