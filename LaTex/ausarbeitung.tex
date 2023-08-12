@@ -139,9 +139,9 @@ Der Prozess beginnt mit der Erfassung der gesprochenen Sprache, sei es mittels e
 \\ \\
 In der nächsten Phase erfolgt die akustische Modellierung. Dieser Schritt umfasst die Analyse der individuellen Sprachrahmen mit dem Ziel, die darin enthaltenen zugrundeliegenden Klänge, als \textit{Phoneme} bekannt, zu identifizieren. Phoneme sind die kleinsten distinkten sprachlichen Einheiten, die den Bausteinen der Wörter zugrunde liegen. Das akustische Modell nutzt ein Trainingskorpus, um auf akkurate Weise die Charakteristiken der Klangmuster in den Audiosignalen zu erfassen und diesen Mustern die entsprechenden Phoneme zuzuordnen.
 \\ \\
-In der Anschlussphase durchläuft die erkannte Phonemsequenz das Sprachmodell. Das Sprachmodell nutzt die geordnete Abfolge der Phoneme, um kohärente Wörter und Sätze zu generieren, die den erkannten Lauten entsprechen. Dieser Schritt stellt einen essentiellen Bestandteil dar, um die gesprochene Äußerung in einen verständlichen und grammatikalisch korrekten schriftlichen Ausdruck zu transformieren.
-\\ \\
-Am Ende dieses Prozesses präsentiert das ASR-System den transkribierten Text als Endergebnis. Hier sieht man eine vereinfachte Darstellung dieses Modelles:
+In der Anschlussphase durchläuft die erkannte Phonemsequenz das Sprachmodell. Das Sprachmodell nutzt die geordnete Abfolge der Phoneme, um kohärente Wörter und Sätze zu generieren, die den erkannten Lauten entsprechen. Dieser Schritt stellt einen essentiellen Bestandteil dar, um die gesprochene Äußerung in einen verständlichen und grammatikalisch korrekten schriftlichen Ausdruck zu transformieren. Am Ende dieses Prozesses stellt das ASR-System den transkribierten Text als Endergebnis dar. 
+\\ \\ 
+Hier sieht man eine vereinfachte Darstellung dieses Modelles:
 \begin{figure}[h!]
 	\centering
 	\includegraphics[width=1\linewidth]{../images/STT}
@@ -153,8 +153,6 @@ Am Ende dieses Prozesses präsentiert das ASR-System den transkribierten Text al
 Die Genauigkeit der Spracherkennung kann auf verschiedene Arten gemessen werden. Je nach Bedarf können mehrere Metriken verwendet werden. Der branchenübliche Vergleich erfolgt jedoch oft mithilfe des Wortfehlerquotienten (Word Error Rate, WER). Die Wortfehlerquote misst den Prozentsatz falscher Transkriptionen im gesamten Satz. Eine niedrigere WER bedeutet daher, dass das System genauer ist.
 \\ \\
 In Bezug auf die Genauigkeit der ASR sehen Sie möglicherweise auch den Begriff \textit{Ground Truth}. Ground Truth bezieht sich auf die zu 100\% genaue (in der Regel menschliche) Transkription, mit der Sie die Genauigkeit vergleichen.
-\\ \\
-\underline{\textbf{Wortfehlerquote (WER):}}
 \\ \\
 Die Wortfehlerquote setzt sich aus drei Arten von Transkriptionsfehlern zusammen, die auftreten können:
 
