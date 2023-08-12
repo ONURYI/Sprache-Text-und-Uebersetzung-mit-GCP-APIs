@@ -244,6 +244,34 @@
       \field{title}{Cloud Computing}
       \field{year}{2023}
     \endentry
+    \entry{towards}{online}{}
+      \name{author}{1}{}{%
+        {{hash=03e294d48148895912ca6944d1ec733f}{%
+           family={Kamdar},
+           familyi={K\bibinitperiod},
+           given={Nishit},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{03e294d48148895912ca6944d1ec733f}
+      \strng{fullhash}{03e294d48148895912ca6944d1ec733f}
+      \strng{bibnamehash}{03e294d48148895912ca6944d1ec733f}
+      \strng{authorbibnamehash}{03e294d48148895912ca6944d1ec733f}
+      \strng{authornamehash}{03e294d48148895912ca6944d1ec733f}
+      \strng{authorfullhash}{03e294d48148895912ca6944d1ec733f}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Zugriffsdatum: 09. August 2023}
+      \field{title}{Measuring and Improving Speech-to-Text Accuracy | Google Cloud Platform}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://medium.com/google-cloud/measuring-and-improving-speech-to-text-accuracy-google-cloud-platform-eba62c50b8ac
+      \endverb
+      \verb{url}
+      \verb https://medium.com/google-cloud/measuring-and-improving-speech-to-text-accuracy-google-cloud-platform-eba62c50b8ac
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

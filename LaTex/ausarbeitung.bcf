@@ -2346,20 +2346,22 @@
   <bcf:section number="0">
     <bcf:citekey order="1">googlecloudskills2023</bcf:citekey>
     <bcf:citekey order="2">giefers2023cloud</bcf:citekey>
-    <bcf:citekey order="3">speechtotext2023</bcf:citekey>
-    <bcf:citekey order="4">speechaccuracy2023</bcf:citekey>
-    <bcf:citekey order="5">cloudtranslation2023</bcf:citekey>
-    <bcf:citekey order="6">classtext2023</bcf:citekey>
-    <bcf:citekey order="7">entitysentiment2023</bcf:citekey>
-    <bcf:citekey order="8">texttospeech2023</bcf:citekey>
-    <bcf:citekey order="9">googlecloudskills2023</bcf:citekey>
-    <bcf:citekey order="10">giefers2023cloud</bcf:citekey>
-    <bcf:citekey order="11">speechtotext2023</bcf:citekey>
-    <bcf:citekey order="12">speechaccuracy2023</bcf:citekey>
-    <bcf:citekey order="13">cloudtranslation2023</bcf:citekey>
-    <bcf:citekey order="14">classtext2023</bcf:citekey>
-    <bcf:citekey order="15">entitysentiment2023</bcf:citekey>
-    <bcf:citekey order="16">texttospeech2023</bcf:citekey>
+    <bcf:citekey order="3">towards</bcf:citekey>
+    <bcf:citekey order="4">speechtotext2023</bcf:citekey>
+    <bcf:citekey order="5">speechaccuracy2023</bcf:citekey>
+    <bcf:citekey order="6">cloudtranslation2023</bcf:citekey>
+    <bcf:citekey order="7">classtext2023</bcf:citekey>
+    <bcf:citekey order="8">entitysentiment2023</bcf:citekey>
+    <bcf:citekey order="9">texttospeech2023</bcf:citekey>
+    <bcf:citekey order="10">googlecloudskills2023</bcf:citekey>
+    <bcf:citekey order="11">giefers2023cloud</bcf:citekey>
+    <bcf:citekey order="12">towards</bcf:citekey>
+    <bcf:citekey order="13">speechtotext2023</bcf:citekey>
+    <bcf:citekey order="14">speechaccuracy2023</bcf:citekey>
+    <bcf:citekey order="15">cloudtranslation2023</bcf:citekey>
+    <bcf:citekey order="16">classtext2023</bcf:citekey>
+    <bcf:citekey order="17">entitysentiment2023</bcf:citekey>
+    <bcf:citekey order="18">texttospeech2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
