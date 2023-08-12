@@ -6,14 +6,14 @@
 \contentsline {section}{\numberline {2}Spracherkennung und Transkription}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Sprache-zu-Text-Prozess}{5}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Messung und Verbesserung der Sprachgenauigkeit}{6}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}Cloud Speech API}{6}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Sprachübersetzung}{7}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Erkennung und Übersetzung von Texten}{7}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Cloud Translation API}{7}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Textanalyse}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Klassifizierung von Text in Kategorien}{8}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Entitäten- und Sentimentanalyse}{8}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Natural Language API}{8}{subsection.4.3}%
-\contentsline {section}{\numberline {5}Sprachsynthese}{9}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Erzeugung synthetischer Sprache}{9}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Natural Language API}{9}{subsection.5.2}%
+\contentsline {subsection}{\numberline {2.3}Cloud Speech API}{7}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Sprachübersetzung}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Erkennung und Übersetzung von Texten}{8}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Cloud Translation API}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Textanalyse}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Klassifizierung von Text in Kategorien}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Entitäten- und Sentimentanalyse}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Natural Language API}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Sprachsynthese}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Erzeugung synthetischer Sprache}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Natural Language API}{10}{subsection.5.2}%
