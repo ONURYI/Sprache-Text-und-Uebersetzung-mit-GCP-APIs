@@ -9,27 +9,9 @@
 \usepackage{csquotes} 
 
 
-\usepackage{listings}
 \usepackage{xcolor}
-
-% Einstellungen für das 'listings'-Paket
-\lstset{
-	basicstyle=\footnotesize\ttfamily,
-	breaklines=true,
-	frame=single,
-	rulecolor=\color{gray},
-	language=Python,
-	keywordstyle=\color{blue},
-	commentstyle=\color{gray},
-	stringstyle=\color{red},
-	numbers=left,
-	numberstyle=\tiny\color{gray},
-	captionpos=b,
-	keepspaces=true,
-	showstringspaces=false,
-	extendedchars=true
-}
-
+\usepackage{listings}
+ 
  
 
 \usepackage{tikz}
@@ -168,7 +150,6 @@ Am Ende dieses Prozesses präsentiert das ASR-System den transkribierten Text al
 \end{figure}
  
 \subsection{Messung und Verbesserung der Sprachgenauigkeit}
-
 Die Genauigkeit der Spracherkennung kann auf verschiedene Arten gemessen werden. Je nach Bedarf können mehrere Metriken verwendet werden. Der branchenübliche Vergleich erfolgt jedoch oft mithilfe des Wortfehlerquotienten (Word Error Rate, WER). Die Wortfehlerquote misst den Prozentsatz falscher Transkriptionen im gesamten Satz. Eine niedrigere WER bedeutet daher, dass das System genauer ist.
 \\ \\
 In Bezug auf die Genauigkeit der ASR sehen Sie möglicherweise auch den Begriff \textit{Ground Truth}. Ground Truth bezieht sich auf die zu 100\% genaue (in der Regel menschliche) Transkription, mit der Sie die Genauigkeit vergleichen.
@@ -190,7 +171,82 @@ Die Anzahl der Fehler jeder der drei Arten wird summiert und durch die Gesamtzah
 
 
 \subsection{Cloud Speech API}
+\subsubsection{Erstellen eines API-Keys}
+Wir beschreiben nun die Schritte, um einen API-Schlüssel zu erstellen und der uns über der SSH bereitgestellten Linux-Instanz verbinden zu können.
+\\ \\
+Um die Cloud Speech API mithilfe von \texttt{curl} anzusprechen, benötigen wir einen API-Schlüssel, der in der Anfrage-URL übergeben wird. Hier sind die Schritte zur Erstellung eines API-Schlüssels:
+\begin{enumerate}
+	\item Wir klicken im Navigationsmenü zu \enquote{APIs \& Services $>$ Anmeldedaten}.
+	
+	\item Klicken anschließend auf \enquote{Zugangsdaten erstellen (\textit{im engl. Credentials})} und wählen \enquote{API-KEY} aus.
+	
+	\item Bewahren die erstellte API-Schlüssel sicher auf, da wir diesen später in unserer Entwicklungsumgebung als Variable verwenden werden.
+	
+	\item Wir klicken anschließend auf \enquote{Schließen}.
+\end{enumerate}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{../images/GCP_CREATE_API}
+	\caption{Erstellen eines API-KEYs in GCP}
+	\label{fig:gcpcreateapi}
+\end{figure}
+\ \\
+Um die nächsten Schritte auszuführen, verbinden wir uns mit der Ihnen bereitgestellten Linux-Instanz über SSH:
+\begin{enumerate}
+	\item Navigieren im Navigationsmenü zu \enquote{Compute Engine $>$ VM-Instanzen}.
+	
+	\item Suchen die Linux-Instanz VM in der Liste der VM-Instanzen. 
+	
+	\item Klicken rechts neben dem Namen der Linux-Instanz auf \enquote{SSH}, um eine interaktive Shell zu öffnen. Diese Shell verwenden wir, um die nächsten Schritte auszuführen.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{../images/VM_Instances}
+	\caption{VM Instanz}
+	\label{fig:vminstances}
+\end{figure}
+
+	\item In der geöffneten SSH-Shell führen wir den folgenden Befehl aus und ersetzen den KEY durch den von uns zuvor erstellten API-Schlüssel:
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../images/SSH}
+	\label{fig:ssh}
+\end{figure}
+\end{enumerate}
+\ \\ \\
+Der nächste Schritt ist die Verwendung von \texttt{curl}, um eine Anfrage an die Cloud Speech API zu senden und die gewünschten Transkriptionen zu erhalten. 
+\subsubsection{Erstellen der API-Anfrage}
+\begin{enumerate}
+\item Wir erstellen unsere Anfrage an die API in einer \texttt{request.json}-Datei. Die Datei \texttt{request.json} kann wie folgt erstellt werden:
+\begin{center}
+\verb|touch request.json|
+\end{center}
+\item Anschließend öffnen wir die Datei mit unserem bevorzugten Editor (nano, vim, emacs) und fügen Folgendes zu unserer \texttt{request.json}-Datei hinzu:
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.9\linewidth]{../images/request_json}
+\label{fig:requestjson}
+\end{figure}
+\ \\
+Hier noch einmal Inhalt der JSON-Datei übersichtlich dargestellt:
+
+
+
+\ 
+\begin{itemize}
+	\item \enquote{config}: Dies ist ein Objekt, das Konfigurationseinstellungen enthält.
+	
+	\item \enquote{encoding}: \enquote{FLAC}: Dies legt das Encoding (Datenformat) für den Audiodatenstrom fest. In diesem Fall wird das FLAC-Format verwendet, das ein verlustfreies Audioformat ist.
+	
+	\item \enquote{languageCode}: \enquote{en-US}: Dies gibt den Sprachcode an. Hier ist es \enquote{en-US}, was auf US-Englisch hinweist.
+	
+	\item \enquote{audio}: Dies ist ebenfalls ein Objekt, das Informationen über die Audiodaten enthält.
+	
+	\item \enquote{uri}: \enquote{gs://cloud-samples-data/speech/brooklyn\_bridge.flac}: Dies ist die URI (Uniform Resource Identifier) oder der Pfad zum Audiofile. In diesem Fall handelt es sich um eine Audioaufnahme der Brooklyn Bridge im FLAC-Format, die in der Google Cloud Storage (gs) gespeichert ist.
+\end{itemize}
+
+\end{enumerate}
 
 
 
