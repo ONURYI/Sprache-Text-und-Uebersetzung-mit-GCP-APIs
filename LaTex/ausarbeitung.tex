@@ -148,7 +148,7 @@ Am Ende dieses Prozesses präsentiert das ASR-System den transkribierten Text al
 	\caption{\textit{Speech-to-Text} - Prozess}
 	\label{fig:stt}
 \end{figure}
-\subsubsection{Mathematischer Hintergrund}
+\subsubsection{Theoretischer Hintergrund}
 \subsubsection{Messung und Verbesserung der Sprachgenauigkeit}
 Die Genauigkeit der Spracherkennung kann auf verschiedene Arten gemessen werden. Je nach Bedarf können mehrere Metriken verwendet werden. Der branchenübliche Vergleich erfolgt jedoch oft mithilfe des Wortfehlerquotienten (Word Error Rate, WER). Die Wortfehlerquote misst den Prozentsatz falscher Transkriptionen im gesamten Satz. Eine niedrigere WER bedeutet daher, dass das System genauer ist.
 \\ \\
@@ -168,7 +168,7 @@ Die Formel für die WER lautet:
 \[ \text{WER} = \frac{S + D + I}{N} \]
 \\
 Die Anzahl der Fehler jeder der drei Arten wird summiert und durch die Gesamtzahl der Wörter (N) in der Ground-Truth-Transkription geteilt, um die Wortfehlerquote (WER) zu ermitteln. Dies bedeutet, dass die WER in Situationen mit sehr geringer Genauigkeit größer als 100\% sein kann.
-
+\ \\
 
 \subsection{Cloud Speech API}
 \subsubsection{Erstellen eines API-Keys}
@@ -275,7 +275,7 @@ curl -s -X POST -H "Content-Type: application/json"
 \ \\
 Es handelt sich um einen \texttt{curl}-Befehl, der eine POST-Anfrage an die Google Cloud Speech-to-Text API sendet. Die Optionen \texttt{-s} und \texttt{-X POST} setzen den Befehl auf den silent-Modus und legen die Anfragemethode auf POST fest. Der Header \texttt{"Content-Type: application/json"} gibt den Medientyp der Anfrage an. Die Option \texttt{--data-binary @request.json} überträgt den Inhalt der Datei \texttt{request.json} als Anfragekörper. Die URL enthält den Endpunkt der API, und der Platzhalter \texttt{\${API\_KEY}} wird durch den tatsächlichen API-Schlüssel ersetzt. Anschließend wird die Antwort der API in einer Datei namens \texttt{result.json} gespeichert.
 \\ \\
-Die Ausgaben
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
