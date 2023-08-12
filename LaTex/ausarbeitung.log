@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.1)  12 AUG 2023 22:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.1)  12 AUG 2023 22:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1159,19 +1159,19 @@ File: ../images/request_json.png Graphic file (type png)
 Package pdftex.def Info: ../images/request_json.png  used on input line 252.
 (pdftex.def)             Requested size: 350.99762pt x 137.94548pt.
  [9 <../images/VM_Instances.png> <../images/SSH.png>]
-Overfull \hbox (3.69987pt too wide) in paragraph at lines 267--267
+Overfull \hbox (3.69987pt too wide) in paragraph at lines 268--268
  []\OT1/cmtt/m/n/12 "uri":"gs://cloud-samples-data/speech/brooklyn_bridge.flac"
 [] 
  []
 
 
-Overfull \hbox (15.78105pt too wide) in paragraph at lines 270--271
+Overfull \hbox (15.78105pt too wide) in paragraph at lines 271--272
 [][]  \OT1/cmr/m/n/12 con-fig\: Dies ist ein Ob-jekt, das Kon-fi-gu-ra-ti-ons-e
 in-stel-lun-gen enth[]alt. 
  []
 
 
-Overfull \hbox (7.1452pt too wide) in paragraph at lines 278--279
+Overfull \hbox (7.1452pt too wide) in paragraph at lines 279--280
 [][]  \OT1/cmr/m/n/12 uri\: []  gs://cloud-samples-data/speech/brooklyn[]bridge
 .flac\: Dies
  []
@@ -1180,70 +1180,78 @@ Overfull \hbox (7.1452pt too wide) in paragraph at lines 278--279
 <../images/curl.png, id=209, 900.36375pt x 244.915pt>
 File: ../images/curl.png Graphic file (type png)
 <use ../images/curl.png>
-Package pdftex.def Info: ../images/curl.png  used on input line 288.
+Package pdftex.def Info: ../images/curl.png  used on input line 289.
 (pdftex.def)             Requested size: 390.0pt x 106.0887pt.
 
-Overfull \hbox (17.5502pt too wide) in paragraph at lines 297--297
+Overfull \hbox (17.5502pt too wide) in paragraph at lines 298--298
 []\OT1/cmtt/m/n/12 "https://speech.googleapis.com/v1/speech:recognize?key=${API
 _KEY}"[] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-299.
+300.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 298--302
-
- []
-
-<../images/ergebnisse.png, id=210, 523.9575pt x 238.8925pt>
-File: ../images/ergebnisse.png Graphic file (type png)
-<use ../images/ergebnisse.png>
-Package pdftex.def Info: ../images/ergebnisse.png  used on input line 309.
-(pdftex.def)             Requested size: 390.0pt x 177.82019pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 312--314
+Underfull \hbox (badness 10000) in paragraph at lines 299--303
 
  []
 
 [11 <../images/curl.png>]
+<../images/ergebnisse.png, id=217, 523.9575pt x 238.8925pt>
+File: ../images/ergebnisse.png Graphic file (type png)
+<use ../images/ergebnisse.png>
+Package pdftex.def Info: ../images/ergebnisse.png  used on input line 306.
+(pdftex.def)             Requested size: 390.0pt x 177.82019pt.
+
+Overfull \hbox (6.3303pt too wide) in paragraph at lines 311--311
+[][][]\OT1/cmr/m/n/10 Auf []$\OT1/cmtt/m/n/10 https : / / github . com / ONURYI
+ / Sprache-[]Text-[]und-[]Uebersetzung-[]mit-[]GCP-[]APIs$[]
+ []
+
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
-) [12 <../images/ergebnisse.png>]
-Overfull \hbox (17.46043pt too wide) in paragraph at lines 349--350
+)
+Underfull \hbox (badness 10000) in paragraph at lines 309--313
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--313
+
+ []
+
+[12 <../images/ergebnisse.png>] [13]
+Overfull \hbox (17.46043pt too wide) in paragraph at lines 347--348
 \OT1/cmr/m/n/12 delt, um ver-schie-de-ne Spra-chen zu []ubersetzen. Hier-bei wi
 rd auf die M[]oglichkeiten
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 355--358
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 353--356
 
  []
 
-[14]
-Overfull \hbox (3.81259pt too wide) in paragraph at lines 366--367
+[15]
+Overfull \hbox (3.81259pt too wide) in paragraph at lines 364--365
 \OT1/cmr/m/n/12 Die Er-zeu-gung syn-the-ti-scher Spra-che mit-tels Text-to-Spee
 ch-Technologie wird
  []
 
-[15]
-Overfull \hbox (65.7735pt too wide) in paragraph at lines 375--375
+[16]
+Overfull \hbox (65.7735pt too wide) in paragraph at lines 373--373
 \OT1/cmr/m/it/12 APIs\OT1/cmr/m/n/12 . Zu-griffs-da-tum: 08. Au-gust 2023. 2023
 . \OT1/cmr/m/sc/12 url\OT1/cmr/m/n/12 : []$\OT1/cmtt/m/n/12 https : / / www . c
 loudskillsboost .
  []
 
 
-Overfull \hbox (33.8849pt too wide) in paragraph at lines 375--375
+Overfull \hbox (33.8849pt too wide) in paragraph at lines 373--373
 \OT1/cmr/m/n/12 Zu-griffs-da-tum: 08. Au-gust 2023. 2023. \OT1/cmr/m/sc/12 url\
 OT1/cmr/m/n/12 : []$\OT1/cmtt/m/n/12 https : / / www . cloudskillsboost .
  []
 
-[16] (./ausarbeitung.aux)
+[17] (./ausarbeitung.aux)
 Package rerunfilecheck Info: File `ausarbeitung.out' has not changed.
 (rerunfilecheck)             Checksum: 034562A3449BA64072E9BE55D2DFBE65;4304.
 Package logreq Info: Writing requests to 'ausarbeitung.run.xml'.
@@ -1251,28 +1259,31 @@ Package logreq Info: Writing requests to 'ausarbeitung.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32131 strings out of 478287
- 602204 string characters out of 5849290
- 1393085 words of memory out of 5000000
- 49785 multiletter control sequences out of 15000+600000
- 476763 words of font info for 54 fonts, out of 8000000 for 9000
+ 32135 strings out of 478287
+ 602250 string characters out of 5849290
+ 1366085 words of memory out of 5000000
+ 49787 multiletter control sequences out of 15000+600000
+ 477217 words of font info for 56 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 84i,7n,80p,830b,2367s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 84i,8n,80p,830b,2367s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-tt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share
-/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on ausarbeitung.pdf (17 pages, 488566 bytes).
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sftt1200.pfb>
+Output written on ausarbeitung.pdf (18 pages, 517644 bytes).
 PDF statistics:
- 361 PDF objects out of 1000 (max. 8388607)
- 302 compressed objects within 4 object streams
- 90 named destinations out of 1000 (max. 500000)
+ 384 PDF objects out of 1000 (max. 8388607)
+ 318 compressed objects within 4 object streams
+ 92 named destinations out of 1000 (max. 500000)
  224 words of extra memory for PDF output out of 10000 (max. 10000000)
 
