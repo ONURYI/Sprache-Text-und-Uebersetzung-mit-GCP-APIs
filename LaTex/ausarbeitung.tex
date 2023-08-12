@@ -306,9 +306,10 @@ Mit dem Befehl \verb|cat result.json| erhält man die folgende Ausgabe:
 	\includegraphics[width=1\linewidth]{../images/ergebnisse}
 	\label{fig:ergebnisse}
 \end{figure}
+\setlength\parindent{0pt}
 Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei durch die Sprach-API wieder, während der \enquote{confidence}-Wert angibt, wie sicher die API ist, dass die Audio-Datei korrekt transkribiert wurde. 
 \\ \\ 
-Im folgenden Python-Codeausschnitt sehen wir, wie wir die Credentials aus der JSON-Datei laden und die Google Speech-to-Text API aufrufen, auch auf unserer eigenen Entwicklungsumgebung verwenden können. Es handelt sich um die selbe FLAC-Audiodatei \footnote{Auf   \url{https://github.com/ONURYI/Sprache-Text-und-Uebersetzung-mit-GCP-APIs} abrufbar}, welche wir laden und rufen die \textbf{recognize}-Funktion auf, um die Spracherkennung durchzuführen.
+Im folgenden Python-Codeausschnitt sehen wir, wie wir die Credentials aus der JSON-Datei laden und die Google Speech-to-Text API aufrufen, auch auf unserer eigenen Entwicklungsumgebung verwenden können. Es handelt sich um die selbe FLAC-Audiodatei \footnote{Auf   \url{https://github.com/ONURYI/Sprache-Text-und-Uebersetzung-mit-GCP-APIs} abrufbar}, welche wir laden und anschließend die \textbf{recognize-Funktion} aufrufen, um die Spracherkennung durchzuführen.
 \ \\
 \begin{lstlisting}[language=Python,numbers = none]
 	from google.cloud import speech
