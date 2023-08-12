@@ -48,35 +48,6 @@
       \verb https://www.cloudskillsboost.google/focuses/1749?parent=catalog
       \endverb
     \endentry
-    \entry{texttospeech2023}{online}{}
-      \name{author}{1}{}{%
-        {{hash=b4e595bd8646c01df540ff38696a35be}{%
-           family={Cloud},
-           familyi={C\bibinitperiod},
-           given={Google},
-           giveni={G\bibinitperiod}}}%
-      }
-      \strng{namehash}{b4e595bd8646c01df540ff38696a35be}
-      \strng{fullhash}{b4e595bd8646c01df540ff38696a35be}
-      \strng{bibnamehash}{b4e595bd8646c01df540ff38696a35be}
-      \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
-      \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
-      \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
-      \field{extraname}{2}
-      \field{sortinit}{C}
-      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Zugriffsdatum: 08. August 2023}
-      \field{title}{Create Synthetic Speech Using Text-to-Speech}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://www.cloudskillsboost.google/focuses/1290?parent=catalog
-      \endverb
-      \verb{url}
-      \verb https://www.cloudskillsboost.google/focuses/1290?parent=catalog
-      \endverb
-    \endentry
     \entry{entitysentiment2023}{online}{}
       \name{author}{1}{}{%
         {{hash=b4e595bd8646c01df540ff38696a35be}{%
@@ -91,7 +62,7 @@
       \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
-      \field{extraname}{3}
+      \field{extraname}{2}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -120,7 +91,7 @@
       \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
-      \field{extraname}{4}
+      \field{extraname}{3}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -149,7 +120,7 @@
       \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
-      \field{extraname}{5}
+      \field{extraname}{4}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -178,7 +149,7 @@
       \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
-      \field{extraname}{6}
+      \field{extraname}{5}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -207,7 +178,7 @@
       \strng{authorbibnamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authornamehash}{b4e595bd8646c01df540ff38696a35be}
       \strng{authorfullhash}{b4e595bd8646c01df540ff38696a35be}
-      \field{extraname}{7}
+      \field{extraname}{6}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
@@ -272,7 +243,7 @@
       \verb https://medium.com/google-cloud/measuring-and-improving-speech-to-text-accuracy-google-cloud-platform-eba62c50b8ac
       \endverb
     \endentry
-    \entry{radford2023robust}{article}{}
+    \entry{radford2022robust}{misc}{}
       \name{author}{6}{}{%
         {{hash=a812c46caad94fc8701be37871f303ba}{%
            family={Radford},
@@ -315,8 +286,13 @@
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprintclass}{eess.AS}
+      \field{eprinttype}{arXiv}
       \field{title}{Robust Speech Recognition via Large-Scale Weak Supervision}
-      \field{year}{2023}
+      \field{year}{2022}
+      \verb{eprint}
+      \verb 2212.04356
+      \endverb
     \endentry
   \enddatalist
 \endrefsection
