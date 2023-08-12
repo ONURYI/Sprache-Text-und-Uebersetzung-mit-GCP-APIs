@@ -12,9 +12,10 @@
 \contentsline {subsubsection}{\numberline {2.2.2}Erstellen der API-Anfrage}{9}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Aufrufen der API}{11}{subsubsection.2.2.3}%
 \contentsline {section}{\numberline {3}Sprachübersetzung}{14}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Erkennung und Übersetzung von Texten}{14}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Übersetzung von Texten}{14}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Cloud Translation API}{14}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Textanalyse}{15}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Klassifizierung von Text in Kategorien}{15}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Entitäten- und Sentimentanalyse}{15}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Natural Language API}{15}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Sprachsynthese}{16}{section.5}%
