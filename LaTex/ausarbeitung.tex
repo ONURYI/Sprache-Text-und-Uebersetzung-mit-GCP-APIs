@@ -175,6 +175,7 @@ Hier sieht man eine vereinfachte Darstellung dieses Modelles:
 	\label{fig:stt}
 \end{figure}
 \subsubsection{Theoretischer Hintergrund}
+\newpage
 \subsubsection{Messung und Verbesserung der Sprachgenauigkeit}
 Die Genauigkeit der Spracherkennung kann auf verschiedene Arten gemessen werden. Je nach Bedarf können mehrere Metriken verwendet werden. Der branchenübliche Vergleich erfolgt jedoch oft mithilfe des Wortfehlerquotienten (Word Error Rate, WER). Die Wortfehlerquote misst den Prozentsatz falscher Transkriptionen im gesamten Satz. Eine niedrigere WER bedeutet daher, dass das System genauer ist.
 \\ \\
@@ -192,8 +193,7 @@ Die Formel für die WER lautet:
 \[ \text{WER} = \frac{S + D + I}{N} \]
 \\
 Die Anzahl der Fehler jeder der drei Arten wird summiert und durch die Gesamtzahl der Wörter (N) in der Ground-Truth-Transkription geteilt, um die Wortfehlerquote (WER) zu ermitteln. Dies bedeutet, dass die WER in Situationen mit sehr geringer Genauigkeit größer als 100\% sein kann.
-\ \\
-
+\newpage
 \subsection{Cloud Speech API}
 \subsubsection{Erstellen eines API-Keys}
 Wir beschreiben nun die Schritte, um einen API-Schlüssel zu erstellen und der uns über der SSH bereitgestellten Linux-Instanz verbinden zu können.
@@ -234,7 +234,7 @@ Um die nächsten Schritte auszuführen, verbinden wir uns mit der Ihnen bereitge
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.8\linewidth]{../images/SSH}
+	\includegraphics[width=0.7\linewidth]{../images/SSH}
 	\label{fig:ssh}
 \end{figure}
 \end{enumerate}
@@ -252,7 +252,6 @@ Der nächste Schritt ist die Verwendung von \texttt{curl}, um eine Anfrage an di
 \includegraphics[width=0.9\linewidth]{../images/request_json}
 \label{fig:requestjson}
 \end{figure}
-\ \\
 Hier obiger Code noch einmal übersichtlich dargestellt:
 \begin{verbatim}
 	{
@@ -310,9 +309,10 @@ erhält man die folgende Ausgabe:
 	\includegraphics[width=1\linewidth]{../images/ergebnisse}
 	\label{fig:ergebnisse}
 \end{figure}
-\ \\
+\ \\ \\
 Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei durch die Sprach-API wieder, während der \enquote{confidence}-Wert angibt, wie sicher die API ist, dass die Audio-Datei korrekt transkribiert wurde. 
-\newpage
+\\ \\ 
+
 \begin{lstlisting}[language=Python,numbers = none]
 	from google.cloud import speech
 	
@@ -327,7 +327,6 @@ Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei dur
 	content = audio_file.read()
 	
 	audio = speech.RecognitionAudio(content=content)
-	
 	response = client.recognize(config=config, audio=audio)
 	
 	for result in response.results:
@@ -337,7 +336,6 @@ Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei dur
 	print('transcript: {}'.format(transcript))
 	print('confidence: {}'.format(confidence))
 \end{lstlisting}
-\ \\
 Ausgabe: 
 \begin{center}
 	\verb|>> Transkript: how old is the Brooklyn Bridge| 
