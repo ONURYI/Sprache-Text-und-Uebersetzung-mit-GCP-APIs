@@ -229,11 +229,20 @@ Der nächste Schritt ist die Verwendung von \texttt{curl}, um eine Anfrage an di
 \label{fig:requestjson}
 \end{figure}
 \ \\
-Hier noch einmal Inhalt der JSON-Datei übersichtlich dargestellt:
-
-
-
-\ 
+Hier obiger Code noch einmal übersichtlich dargestellt:
+\begin{verbatim}
+	{
+		"config": {
+			"encoding":"FLAC",
+			"languageCode": "en-US"
+		},
+	
+		"audio": {
+			"uri":"gs://cloud-samples-data/speech/brooklyn_bridge.flac"
+		}
+	}
+\end{verbatim}
+Nachdem wir uns den obigen JSON-Code erstellt haben, werfen wir einen Blick über die einzelnen Bestandteile
 \begin{itemize}
 	\item \enquote{config}: Dies ist ein Objekt, das Konfigurationseinstellungen enthält.
 	
