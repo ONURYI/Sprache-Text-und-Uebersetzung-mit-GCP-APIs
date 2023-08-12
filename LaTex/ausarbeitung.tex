@@ -59,7 +59,7 @@
 			\begin{center}
 				\vspace*{1cm}
 				\Huge
-				Sprache, Spracheingabe, Text \& Übersetzung mit Google Cloud APIs
+				Sprache, Sprachverarbeitung, Text \& Übersetzung mit Google Cloud APIs
 				
 				
 				\vspace{1.5cm}
@@ -225,7 +225,7 @@ Um die nächsten Schritte auszuführen, verbinden wir uns mit der Ihnen bereitge
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth]{../images/VM_Instances}
+	\includegraphics[width=1\linewidth]{../images/VM_Instances}
 	\caption{VM Instanz}
 	\label{fig:vminstances}
 \end{figure}
@@ -309,7 +309,7 @@ Mit dem Befehl \verb|cat result.json| erhält man die folgende Ausgabe:
 \setlength\parindent{0pt}
 Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei durch die Sprach-API wieder, während der \enquote{confidence}-Wert angibt, wie sicher die API ist, dass die Audio-Datei korrekt transkribiert wurde. 
 \\ \\ 
-Im folgenden Python-Codeausschnitt sehen wir, wie wir die Credentials aus der JSON-Datei laden und die Google Speech-to-Text API aufrufen, auch auf unserer eigenen Entwicklungsumgebung verwenden können. Es handelt sich um die selbe FLAC-Audiodatei \footnote{Auf   \url{https://github.com/ONURYI/Sprache-Text-und-Uebersetzung-mit-GCP-APIs} abrufbar}, welche wir laden und anschließend die \textbf{recognize-Funktion} aufrufen, um die Spracherkennung durchzuführen.
+Wir können die Google Speech-to-Text API auch auf unserer eigenen Entwicklungsumgebung verwenden. Exemplarisch sehen wir hier einen Python-Code, welchem wir die Credentials aus der JSON-Datei übergeben und ebenfalls die selbe FLAC-Audiodatei abrufen \footnote{Auf   \url{https://github.com/ONURYI/Sprache-Text-und-Uebersetzung-mit-GCP-APIs} herunter ladbar} und anschließend die \textbf{recognize-Funktion} aufrufen, um die Spracherkennung durchzuführen.
 \ \\
 \begin{lstlisting}[language=Python,numbers = none]
 	from google.cloud import speech
@@ -338,9 +338,38 @@ Ausgabe:
 \begin{center}
 	\verb|>> Transkript: how old is the Brooklyn Bridge| 
 	\verb|confidence: 0.9821605682373047|
-\end{center}
+\textit{}\end{center}
+\  \\ 
+Zum Vergleich, schauen wir uns nun einmal das von OpenAI bereitgestellte ASR Modell, namens \textbf{\textit{Whisper AI}}(siehe \cite{radford2023robust}) an, welche mithilfe des Paketverwalters pip von Python installiert werden:
 
+\begin{verbatim}
+!pip install git+https://github.com/openai/whisper.git 
+\end{verbatim}
 
+\begin{lstlisting}[language=Python,numbers = none]
+import whisper 
+
+model = whisper.load_model('base')
+model.transcribe('speech_brooklyn_bridge.flac',fp16=False)
+\end{lstlisting}
+\ \\
+Und erhalten die folgende Ausgabe
+\begin{verbatim}
+	{'text': ' How old is the Brooklyn Bridge?',
+		'segments': [{'id': 0,
+			'seek': 0,
+			'start': 0.0,
+			'end': 1.76,
+			'text': ' How old is the Brooklyn Bridge?',
+			'tokens': [50364, 1012, 1331, 307, 264, 21872, 18917, 30, 50452],
+			'temperature': 0.0,
+			'avg_logprob': -0.3769610643386841,
+			'compression_ratio': 0.8378378378378378,
+			'no_speech_prob': 0.019619377329945564}],
+		'language': 'en'}
+\end{verbatim}
+\ \\
+Wir sind auch hier das die Sprache richtig transkripiert wird, jedoch die \textit{confidence}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
