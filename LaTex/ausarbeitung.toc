@@ -9,6 +9,7 @@
 \contentsline {subsection}{\numberline {2.3}Cloud Speech API}{7}{subsection.2.3}%
 \contentsline {subsubsection}{\numberline {2.3.1}Erstellen eines API-Keys}{7}{subsubsection.2.3.1}%
 \contentsline {subsubsection}{\numberline {2.3.2}Erstellen der API-Anfrage}{9}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Aufrufen der API}{10}{subsubsection.2.3.3}%
 \contentsline {section}{\numberline {3}Sprachübersetzung}{11}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Erkennung und Übersetzung von Texten}{11}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Cloud Translation API}{11}{subsection.3.2}%
