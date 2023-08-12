@@ -13,6 +13,32 @@
 \usepackage{listings}
  
  
+ \definecolor{codegreen}{rgb}{0,0.6,0}
+ \definecolor{codegray}{rgb}{0.5,0.5,0.5}
+ \definecolor{codepurple}{rgb}{0.58,0,0.82}
+ \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+ \lstdefinestyle{mystyle}{
+ 	backgroundcolor=\color{backcolour},
+ 	commentstyle=\color{codegreen},
+ 	keywordstyle=\color{magenta},
+ 	numberstyle=\tiny\color{codegray},
+ 	stringstyle=\color{codepurple},
+ 	basicstyle=\ttfamily\footnotesize,
+ 	breakatwhitespace=false,
+ 	breaklines=true,
+ 	captionpos=b,
+ 	keepspaces=true,
+ 	numbers=left,
+ 	numbersep=5pt,
+ 	showspaces=false,
+ 	showstringspaces=false,
+ 	showtabs=false,
+ 	tabsize=2
+ }
+ 
+ \lstset{style=mystyle}
+ 
 
 \usepackage{tikz}
 \usetikzlibrary{positioning}
@@ -208,7 +234,7 @@ Um die nächsten Schritte auszuführen, verbinden wir uns mit der Ihnen bereitge
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../images/SSH}
+	\includegraphics[width=0.8\linewidth]{../images/SSH}
 	\label{fig:ssh}
 \end{figure}
 \end{enumerate}
@@ -260,9 +286,9 @@ Um die API aufzurufen, müssen Sie den Anfragekörper zusammen mit der API-Schl�
 
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.9\linewidth]{../images/curl}
-	\caption{}
+	\includegraphics[width=1\linewidth]{../images/curl}
 \end{figure}
+\ \\
 Hier noch einmal übersichtlich dargestellt:
 \begin{verbatim}
 curl -s -X POST -H "Content-Type: application/json" 
@@ -273,7 +299,50 @@ curl -s -X POST -H "Content-Type: application/json"
 \ \\
 Es handelt sich um einen \texttt{curl}-Befehl, der eine POST-Anfrage an die Google Cloud Speech-to-Text API sendet. Die Optionen \texttt{-s} und \texttt{-X POST} setzen den Befehl auf den silent-Modus und legen die Anfragemethode auf POST fest. Der Header \texttt{"Content-Type: application/json"} gibt den Medientyp der Anfrage an. Die Option \texttt{--data-binary @request.json} überträgt den Inhalt der Datei \texttt{request.json} als Anfragekörper. Die URL enthält den Endpunkt der API, und der Platzhalter \texttt{\${API\_KEY}} wird durch den tatsächlichen API-Schlüssel ersetzt. Anschließend wird die Antwort der API in einer Datei namens \texttt{result.json} gespeichert.
 \\ \\
+Mit dem Befehl
+\begin{center}
+	\verb|cat result.json|
+\end{center}
+erhält man die folgende Ausgabe:
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{../images/ergebnisse}
+	\label{fig:ergebnisse}
+\end{figure}
+\ \\
+Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei durch die Sprach-API wieder, während der \enquote{confidence}-Wert angibt, wie sicher die API ist, dass die Audio-Datei korrekt transkribiert wurde. 
+\newpage
+\begin{lstlisting}[language=Python,numbers = none]
+	from google.cloud import speech
+	
+	client = speech.SpeechClient.from_service_account_json('YOUR.json')
+	
+	config = speech.RecognitionConfig(
+	encoding=speech.RecognitionConfig.AudioEncoding.FLAC,
+	language_code='en-US',   
+	)
+	
+	with open('speech_brooklyn_bridge.flac', 'rb') as audio_file:
+	content = audio_file.read()
+	
+	audio = speech.RecognitionAudio(content=content)
+	
+	response = client.recognize(config=config, audio=audio)
+	
+	for result in response.results:
+	transcript = result.alternatives[0].transcript
+	confidence = result.alternatives[0].confidence
+	
+	print('transcript: {}'.format(transcript))
+	print('confidence: {}'.format(confidence))
+\end{lstlisting}
+\ \\
+Ausgabe: 
+\begin{center}
+	\verb|>> Transkript: how old is the Brooklyn Bridge| 
+	\verb|confidence: 0.9821605682373047|
+\end{center}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
