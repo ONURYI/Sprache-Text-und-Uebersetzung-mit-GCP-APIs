@@ -3,7 +3,7 @@
 In diesem Repository erforschen wir verschiedene Google Cloud APIs, die sich mit Sprache und Text beschäftigen. Die Inhalte umfassen:
 
 ## 🎤 Sprache-zu-Text-Transkription mit der Cloud Speech API
-- Aufzeichnung einer eigenen Audiodatei und Umwandlung in Text.
+- Umwandlung einer Audiodatei in Text.
 
 ## 🔠 Übersetzen von Texten mit der Cloud Translation API
 - Erkennen der Sprache eines Textes und anschließendes Übersetzen in eine andere Sprache.
