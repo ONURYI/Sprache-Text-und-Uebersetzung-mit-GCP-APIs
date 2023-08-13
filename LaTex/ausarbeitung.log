@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.1)  13 AUG 2023 10:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2023.7.1)  13 AUG 2023 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1009,73 +1009,68 @@ been already used, duplicate ignored
                    \relax 
 l.93 \newpage
               [1]
-Underfull \hbox (badness 10000) in paragraph at lines 95--108
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--108
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--108
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--108
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--108
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 95--108
+Underfull \hbox (badness 10000) in paragraph at lines 95--106
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 117--122
+Underfull \hbox (badness 10000) in paragraph at lines 115--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 117--122
+Underfull \hbox (badness 10000) in paragraph at lines 115--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--140
+Underfull \hbox (badness 10000) in paragraph at lines 121--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--140
+Underfull \hbox (badness 10000) in paragraph at lines 121--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--140
+Underfull \hbox (badness 10000) in paragraph at lines 121--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--140
+Underfull \hbox (badness 10000) in paragraph at lines 121--138
 
  []
 
 
-Overfull \hbox (7.65407pt too wide) in paragraph at lines 123--140
+Overfull \hbox (7.65407pt too wide) in paragraph at lines 121--138
 \OT1/cmr/m/n/12 schnel-le, zu-verl[]assige und si-che-re M[]oglichkeit, auf lei
 s-tungs-star-ke NLP-Modelle
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--140
+Underfull \hbox (badness 10000) in paragraph at lines 121--138
 
  []
 
@@ -1083,50 +1078,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--140
 <../images/STT.png, id=131, 1416.29124pt x 360.34625pt>
 File: ../images/STT.png Graphic file (type png)
 <use ../images/STT.png>
-Package pdftex.def Info: ../images/STT.png  used on input line 173.
+Package pdftex.def Info: ../images/STT.png  used on input line 171.
 (pdftex.def)             Requested size: 390.0pt x 99.22473pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--177
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--177
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--177
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--177
+Underfull \hbox (badness 10000) in paragraph at lines 160--175
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 178--183
+Underfull \hbox (badness 10000) in paragraph at lines 176--181
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--183
+Underfull \hbox (badness 10000) in paragraph at lines 176--181
 
  []
 
 [6 <../images/STT.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 197--201
+Underfull \hbox (badness 10000) in paragraph at lines 195--199
 
  []
 
 <../images/GCP_CREATE_API.png, id=149, 1570.86874pt x 428.60126pt>
 File: ../images/GCP_CREATE_API.png Graphic file (type png)
 <use ../images/GCP_CREATE_API.png>
-Package pdftex.def Info: ../images/GCP_CREATE_API.png  used on input line 211.
+Package pdftex.def Info: ../images/GCP_CREATE_API.png  used on input line 209.
 (pdftex.def)             Requested size: 390.0pt x 106.4045pt.
 
-Overfull \hbox (4.401pt too wide) in paragraph at lines 218--219
+Overfull \hbox (4.401pt too wide) in paragraph at lines 216--217
 []\OT1/cmr/m/n/12 Navigieren im Na-vi-ga-ti-ons-men[]u zu []  Com-pu-te En-gi-n
 e $\OML/cmm/m/it/12 >$ \OT1/cmr/m/n/12 VM-Instanzen\. 
  []
@@ -1135,15 +1130,15 @@ e $\OML/cmm/m/it/12 >$ \OT1/cmr/m/n/12 VM-Instanzen\.
 <../images/VM_Instances.png, id=163, 1570.86874pt x 428.60126pt>
 File: ../images/VM_Instances.png Graphic file (type png)
 <use ../images/VM_Instances.png>
-Package pdftex.def Info: ../images/VM_Instances.png  used on input line 226.
+Package pdftex.def Info: ../images/VM_Instances.png  used on input line 224.
 (pdftex.def)             Requested size: 390.0pt x 106.4045pt.
 <../images/SSH.png, id=164, 896.34875pt x 709.65125pt>
 File: ../images/SSH.png Graphic file (type png)
 <use ../images/SSH.png>
-Package pdftex.def Info: ../images/SSH.png  used on input line 235.
+Package pdftex.def Info: ../images/SSH.png  used on input line 233.
 (pdftex.def)             Requested size: 272.99881pt x 216.1347pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--241
+Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
  []
 
@@ -1151,22 +1146,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 239--241
 <../images/request_json.png, id=176, 891.33pt x 350.30875pt>
 File: ../images/request_json.png Graphic file (type png)
 <use ../images/request_json.png>
-Package pdftex.def Info: ../images/request_json.png  used on input line 250.
+Package pdftex.def Info: ../images/request_json.png  used on input line 248.
 (pdftex.def)             Requested size: 350.99762pt x 137.94548pt.
 
-Overfull \hbox (3.69987pt too wide) in paragraph at lines 266--266
+Overfull \hbox (3.69987pt too wide) in paragraph at lines 264--264
  []\OT1/cmtt/m/n/12 "uri":"gs://cloud-samples-data/speech/brooklyn_bridge.flac"
 [] 
  []
 
 
-Overfull \hbox (15.78105pt too wide) in paragraph at lines 269--270
+Overfull \hbox (15.78105pt too wide) in paragraph at lines 267--268
 [][]  \OT1/cmr/m/n/12 con-fig\: Dies ist ein Ob-jekt, das Kon-fi-gu-ra-ti-ons-e
 in-stel-lun-gen enth[]alt. 
  []
 
 [9 <../images/request_json.png>]
-Overfull \hbox (7.1452pt too wide) in paragraph at lines 277--278
+Overfull \hbox (7.1452pt too wide) in paragraph at lines 275--276
 [][]  \OT1/cmr/m/n/12 uri\: []  gs://cloud-samples-data/speech/brooklyn[]bridge
 .flac\: Dies
  []
@@ -1174,26 +1169,26 @@ Overfull \hbox (7.1452pt too wide) in paragraph at lines 277--278
 <../images/curl.png, id=185, 900.36375pt x 244.915pt>
 File: ../images/curl.png Graphic file (type png)
 <use ../images/curl.png>
-Package pdftex.def Info: ../images/curl.png  used on input line 287.
+Package pdftex.def Info: ../images/curl.png  used on input line 285.
 (pdftex.def)             Requested size: 390.0pt x 106.0887pt.
 
-Overfull \hbox (17.5502pt too wide) in paragraph at lines 296--296
+Overfull \hbox (17.5502pt too wide) in paragraph at lines 294--294
 []\OT1/cmtt/m/n/12 "https://speech.googleapis.com/v1/speech:recognize?key=${API
 _KEY}"[] 
  []
 
 LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
-298.
+296.
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 <../images/ergebnisse.png, id=186, 523.9575pt x 238.8925pt>
 File: ../images/ergebnisse.png Graphic file (type png)
 <use ../images/ergebnisse.png>
-Package pdftex.def Info: ../images/ergebnisse.png  used on input line 303.
+Package pdftex.def Info: ../images/ergebnisse.png  used on input line 301.
 (pdftex.def)             Requested size: 390.0pt x 177.82019pt.
 
-Overfull \hbox (6.3303pt too wide) in paragraph at lines 310--310
+Overfull \hbox (6.3303pt too wide) in paragraph at lines 308--308
 [][][]\OT1/cmr/m/n/10 Auf []$\OT1/cmtt/m/n/10 https : / / github . com / ONURYI
  / Sprache-[]Text-[]und-[]Uebersetzung-[]mit-[]GCP-[]APIs$[]
  []
@@ -1201,114 +1196,148 @@ Overfull \hbox (6.3303pt too wide) in paragraph at lines 310--310
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 297--312
+Underfull \hbox (badness 10000) in paragraph at lines 295--310
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 297--312
+Underfull \hbox (badness 10000) in paragraph at lines 295--310
 
  []
 
 [10 <../images/curl.png>] [11 <../images/ergebnisse.png>]
-Overfull \hbox (11.3752pt too wide) in paragraph at lines 368--368
+Overfull \hbox (11.3752pt too wide) in paragraph at lines 366--366
 []\OT1/cmtt/m/n/12 'tokens': [50364, 1012, 1331, 307, 264, 21872, 18917, 30, 50
 452],[] 
  []
 
 [12] [13]
-Underfull \hbox (badness 10000) in paragraph at lines 379--389
+Underfull \hbox (badness 10000) in paragraph at lines 377--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--389
+Underfull \hbox (badness 10000) in paragraph at lines 377--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--389
+Underfull \hbox (badness 10000) in paragraph at lines 377--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--389
+Underfull \hbox (badness 10000) in paragraph at lines 377--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--389
+Underfull \hbox (badness 10000) in paragraph at lines 377--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--411
+Underfull \hbox (badness 10000) in paragraph at lines 399--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--411
+Underfull \hbox (badness 10000) in paragraph at lines 399--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--411
+Underfull \hbox (badness 10000) in paragraph at lines 399--409
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 401--411
+Underfull \hbox (badness 10000) in paragraph at lines 399--409
 
  []
 
 [14]
-Overfull \hbox (25.70053pt too wide) in paragraph at lines 421--422
+Overfull \hbox (25.70053pt too wide) in paragraph at lines 419--420
 []\OT1/cmr/m/n/12 Englisches Vo-ka-bu-lar: [[]  How\, []  old\, []  is\, []  th
 e\, []  Broo-klyn\, []  Bridge\,
  []
 
 
-Overfull \hbox (23.08945pt too wide) in paragraph at lines 422--423
+Overfull \hbox (23.08945pt too wide) in paragraph at lines 420--421
 []\OT1/cmr/m/n/12 Deutsches Vo-ka-bu-lar: [[]  Wie\, []  alt\, []  ist\, []  di
 e\, []  Broo-klyn\, []  Bridge\,
  []
 
 
-Overfull \hbox (4.7764pt too wide) in paragraph at lines 438--440
+Overfull \hbox (4.7764pt too wide) in paragraph at lines 436--438
 \OT1/cmr/m/n/12 h[]aufig auf fort-schritt-li-che neu-ro-na-le Netz-werkar-chi-t
 ek-tu-ren wie RNNs, LSTMs
  []
 
 
-Overfull \hbox (16.57059pt too wide) in paragraph at lines 438--440
+Overfull \hbox (16.57059pt too wide) in paragraph at lines 436--438
 \OT1/cmr/m/n/12 und \OT1/cmr/m/it/12 At-ten-ti-on Layers \OT1/cmr/m/n/12 zur[]u
 ckgegriffen. Letz-te-res zeich-net sich durch die F[]ahigkeit
  []
 
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 452--455
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 439--442
 
  []
 
-[17]
-Overfull \hbox (1.76323pt too wide) in paragraph at lines 464--464
+<../images/translation_API.png, id=265, 1058.95625pt x 230.8625pt>
+File: ../images/translation_API.png Graphic file (type png)
+<use ../images/translation_API.png>
+Package pdftex.def Info: ../images/translation_API.png  used on input line 451.
+
+(pdftex.def)             Requested size: 390.0pt x 85.02324pt.
+<../images/result_translate.png, id=267, 527.9725pt x 283.0575pt>
+File: ../images/result_translate.png Graphic file (type png)
+<use ../images/result_translate.png>
+Package pdftex.def Info: ../images/result_translate.png  used on input line 457
+.
+(pdftex.def)             Requested size: 272.99881pt x 146.35715pt.
+[16 <../images/translation_API.png> <../images/result_translate.png>]
+<../images/result_port.png, id=276, 356.33125pt x 199.74625pt>
+File: ../images/result_port.png Graphic file (type png)
+<use ../images/result_port.png>
+Package pdftex.def Info: ../images/result_port.png  used on input line 470.
+(pdftex.def)             Requested size: 272.99881pt x 153.04007pt.
+ [17 <../images/result_port.png>]
+Overfull \hbox (17.22078pt too wide) in paragraph at lines 483--486
+\OT1/cmr/m/n/12 Die Text-klas-si-fi-zie-rung erm[]oglicht das Verst[]andnis und
+ die Ver-ar-bei-tung mensch-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--486
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--490
+
+ []
+
+[18]
+Overfull \hbox (1.76323pt too wide) in paragraph at lines 503--503
 []\OT1/cmr/m/n/12 Google Cloud. \OT1/cmr/m/it/12 Lan-gua-ge, Speech, Text, & Tr
 ans-la-ti-on with Goo-gle Cloud
  []
 
 
-Overfull \hbox (0.85469pt too wide) in paragraph at lines 464--464
+Overfull \hbox (0.85469pt too wide) in paragraph at lines 503--503
 \OT1/cmr/m/n/12 da-tum: 08. Au-gust 2023. 2023. \OT1/cmr/m/sc/12 url\OT1/cmr/m/
 n/12 : []$\OT1/cmtt/m/n/12 https : / / www . cloudskillsboost .
  []
 
 
-Overfull \hbox (4.9415pt too wide) in paragraph at lines 464--464
+Overfull \hbox (4.9415pt too wide) in paragraph at lines 503--503
 \OT1/cmtt/m/n/12 speech -[] to -[] text -[] accuracy -[] google -[] cloud -[] p
 latform -[] eba62c50b8ac$[]\OT1/cmr/m/n/12 . 
  []
 
-[18] (./ausarbeitung.aux)
+[19] (./ausarbeitung.aux)
 Package rerunfilecheck Info: File `ausarbeitung.out' has not changed.
 (rerunfilecheck)             Checksum: 54CF59354D7ED51F2C8130772BB8AD25;3535.
 Package logreq Info: Writing requests to 'ausarbeitung.run.xml'.
@@ -1316,10 +1345,10 @@ Package logreq Info: Writing requests to 'ausarbeitung.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32189 strings out of 478287
- 603246 string characters out of 5849290
- 1378211 words of memory out of 5000000
- 49832 multiletter control sequences out of 15000+600000
+ 32230 strings out of 478287
+ 604404 string characters out of 5849290
+ 1378487 words of memory out of 5000000
+ 49866 multiletter control sequences out of 15000+600000
  477217 words of font info for 56 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  84i,8n,80p,830b,2367s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1337,10 +1366,10 @@ usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/te
 xmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/publ
 ic/cm-super/sftt1200.pfb>
-Output written on ausarbeitung.pdf (19 pages, 532834 bytes).
+Output written on ausarbeitung.pdf (20 pages, 589736 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 319 compressed objects within 4 object streams
- 101 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 402 PDF objects out of 1000 (max. 8388607)
+ 328 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

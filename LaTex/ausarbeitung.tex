@@ -102,8 +102,6 @@ In der \textit{Sprachübersetzung} wird die \textit{Cloud Translation API} behan
 \\ \\
 Der Bereich \textit{Textanalyse} befasst sich mit der \textit{Natural Language API}, die Techniken zur Klassifizierung von Text in Kategorien und zur Analyse von Entitäten und Sentiments bietet.
 \\ \\
-Im Abschnitt \textit{Sprachsynthese} wird die \textit{Text-to-Speech API} vorgestellt, die die Erzeugung synthetischer Sprache ermöglicht.
-\\ \\
 Die Arbeit dient nicht nur als theoretischer Überblick, sondern bietet auch praktische Einblicke und Anleitungen zur Verwendung dieser Tools. Dabei werden unterschiedliche Schwierigkeitsgrade und Themenbereiche abgedeckt, um einen umfassenden Einblick in die Möglichkeiten der Sprach- und Textverarbeitung mit Google Cloud zu bieten.
 
 	
@@ -439,8 +437,39 @@ Und unser Ziel ist es, vom englischen ins deutsche zu übersetzen. Folgende Schr
 Dies ist nur ein sehr stark vereinfachte Darstellung. In der Praxis werden häufig auf fortschrittliche neuronale Netzwerkarchitekturen wie RNNs, LSTMs und \textit{Attention Layers} zurückgegriffen. Letzteres zeichnet sich durch die Fähigkeit aus, den Kontext eines Satzes zu erfassen.
 \subsection{Cloud Translation API}
 Die Schritte zur Erstellung eines API-KEYs sind identisch mit dem in \ref{subsubsec:generate-key} Ablauf beschrieben Prozess.
-
-
+\\ \\
+Wir wollen hier nun den folgenden Text - \enquote{My name is Steve} ins Spanische übersetzen, hierzu übergeben wirden zu übersetzenden Text zusammen mit der API-Schlüssel-Umgebungsvariable an die Übersetzungs-API mithilfe des folgenden Curl-Befehls, direkt in die Cloud Shell ein.
+\begin{center}
+	\begin{verbatim}
+		TEXT="My%20name%20is%20Steve"
+		curl "https://translation.googleapis.com/language/translate/
+		v2?target=es&key=${API_KEY}&q=${TEXT}"
+	\end{verbatim}
+\end{center}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{../images/translation_API}
+	\label{fig:translationapi}
+\end{figure}
+\url{"My%20name%20is%20Steve"} ist URL-codiert. Die URL-Codierung ist eine Methode, um Sonderzeichen und Leerzeichen in einer URL darzustellen. \\Unser Ergebnis lautet dann wie folgt:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../images/result_translate}
+	\label{fig:resulttranslate}
+\end{figure}
+\ \\
+Zusätzlich zur Übersetzung von Texten kann die Übersetzungs-API auch die Sprache des Textes erkennen. Hierzu geben wir 
+\begin{verbatim}
+	NEW_TEXT="Meu%20nome%20é%20Steven"
+	curl "https://translation.googleapis.com/language/translate/
+	v2/detect?key=${API_KEY}&q=${NEW_TEXT}"
+\end{verbatim}
+ein und erhalten die folgende Ausgabe:
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../images/result_port}
+	\label{fig:resultport}
+\end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -449,14 +478,24 @@ Die Schritte zur Erstellung eines API-KEYs sind identisch mit dem in \ref{subsub
 
 \newpage
 \section{Textanalyse}
-In diesem Abschnitts steht die Klassifizierung von Texten in verschiedene Kategorien im Vordergrund. Dabei wird erläutert, wie die Natural Language API von Google Cloud eingesetzt werden kann, um Texte einer gründlichen Analyse zu unterziehen und sie in entsprechende Kategorien einzuordnen \cite{classtext2023}. Doch die Möglichkeiten gehen noch weiter. 
-\\ \\
-Durch die Entitäten- und Sentimentanalyse gewinnen wir tiefere Einblicke in die Texte. Diese Analysetechniken ermöglichen es, bedeutende Entitäten innerhalb des Textes zu identifizieren sowie die generelle Stimmung und emotionale Tonalität des Textinhalts zu erfassen. Dieser Abschnitt beleuchtet die vielfältigen Anwendungsgebiete der Natural Language API von Google Cloud auf diesem Gebiet \cite{entitysentiment2023}.
+Im letzten Abschnitt liegt der Fokus auf die Textklassifizierung und insbesondere der Entitäts- und Sentimentsanalyse. Hierbei stützen wir uns auf \cite{tunstall2022natural}. Wir erörtern außerdem die Anwendungsmöglichkeiten der Natural Language API von Google Cloud, um eine umfassende Analyse von Texten durchzuführen und sie entsprechenden Kategorien zuzuordnen \cite{classtext2023}, sowie die allgemeine Stimmung zu identifizieren \cite{entitysentiment2023}.
 \subsection{Klassifizierung von Text in Kategorien}
+Die Textklassifizierung ermöglicht das Verständnis und die Verarbeitung menschlicher Sprache. Hierbei werden unstrukturierte Textdaten systematisch organisiert und in sinnvolle Kategorien eingeordnet. Dieser Prozess beruht auf der Analyse sprachlicher Merkmale, Schlüsselwörter, Grammatik und semantischer Zusammenhänge im Text.
+\\ \\
+Ein prägnantes Beispiel für NLP-Klassifizierung ist die automatische Sortierung von E-Mails in Ordner wie \enquote{Eingang}, \enquote{Werbung} oder \enquote{Wichtig}. Durch die Identifikation von Mustern und Charakteristika im Text erfolgt eine gezielte Zuordnung der E-Mails zu den entsprechenden Kategorien.
 \subsection{Entitäten- und Sentimentanalyse}
+Die Entitäten- und Sentimentanalyse erweitert die Textanalyse. Entitäten sind spezifische Objekte, wie Personen, Orte oder Organisationen, die im Text erwähnt werden. Die Entitätenanalyse identifiziert und klassifiziert solche Elemente, um eine tiefere strukturierte Darstellung des Textinhalts zu ermöglichen.
+\\ \\
+Gleichzeitig erfasst die Sentimentanalyse die emotionale Tonalität eines Textes, sei es positiv, neutral oder negativ. Sie basiert auf der Auswertung von Wörtern und Ausdrücken im Text und ermöglicht somit die Einschätzung der übergeordneten Stimmung oder Meinung.
 \subsection{Natural Language API}
 
 
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \thispagestyle{empty}
