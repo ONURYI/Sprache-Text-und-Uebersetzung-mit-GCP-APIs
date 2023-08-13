@@ -2350,18 +2350,20 @@
     <bcf:citekey order="4">speechtotext2023</bcf:citekey>
     <bcf:citekey order="5">speechaccuracy2023</bcf:citekey>
     <bcf:citekey order="6">radford2022robust</bcf:citekey>
-    <bcf:citekey order="7">cloudtranslation2023</bcf:citekey>
-    <bcf:citekey order="8">classtext2023</bcf:citekey>
-    <bcf:citekey order="9">entitysentiment2023</bcf:citekey>
-    <bcf:citekey order="10">googlecloudskills2023</bcf:citekey>
-    <bcf:citekey order="11">giefers2023cloud</bcf:citekey>
-    <bcf:citekey order="12">towards</bcf:citekey>
-    <bcf:citekey order="13">speechtotext2023</bcf:citekey>
-    <bcf:citekey order="14">speechaccuracy2023</bcf:citekey>
-    <bcf:citekey order="15">radford2022robust</bcf:citekey>
-    <bcf:citekey order="16">cloudtranslation2023</bcf:citekey>
-    <bcf:citekey order="17">classtext2023</bcf:citekey>
-    <bcf:citekey order="18">entitysentiment2023</bcf:citekey>
+    <bcf:citekey order="7">tunstall2022natural</bcf:citekey>
+    <bcf:citekey order="8">cloudtranslation2023</bcf:citekey>
+    <bcf:citekey order="9">classtext2023</bcf:citekey>
+    <bcf:citekey order="10">entitysentiment2023</bcf:citekey>
+    <bcf:citekey order="11">googlecloudskills2023</bcf:citekey>
+    <bcf:citekey order="12">giefers2023cloud</bcf:citekey>
+    <bcf:citekey order="13">towards</bcf:citekey>
+    <bcf:citekey order="14">speechtotext2023</bcf:citekey>
+    <bcf:citekey order="15">speechaccuracy2023</bcf:citekey>
+    <bcf:citekey order="16">radford2022robust</bcf:citekey>
+    <bcf:citekey order="17">tunstall2022natural</bcf:citekey>
+    <bcf:citekey order="18">cloudtranslation2023</bcf:citekey>
+    <bcf:citekey order="19">classtext2023</bcf:citekey>
+    <bcf:citekey order="20">entitysentiment2023</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

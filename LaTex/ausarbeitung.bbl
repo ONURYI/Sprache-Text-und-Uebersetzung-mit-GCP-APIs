@@ -294,6 +294,49 @@
       \verb 2212.04356
       \endverb
     \endentry
+    \entry{tunstall2022natural}{book}{}
+      \name{author}{3}{}{%
+        {{hash=84753f72447819b568b715116160e2f8}{%
+           family={Tunstall},
+           familyi={T\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=45b9bcc00a4862f53543f4d5a2b4b26f}{%
+           family={Werra},
+           familyi={W\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod},
+           prefix={von},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=9018a5f760a7d0513c792f01bd7bc621}{%
+           family={Wolf},
+           familyi={W\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O'Reilly Media, Incorporated}%
+      }
+      \strng{namehash}{878906ebeacf955de242ee960dff61ec}
+      \strng{fullhash}{878906ebeacf955de242ee960dff61ec}
+      \strng{bibnamehash}{878906ebeacf955de242ee960dff61ec}
+      \strng{authorbibnamehash}{878906ebeacf955de242ee960dff61ec}
+      \strng{authornamehash}{878906ebeacf955de242ee960dff61ec}
+      \strng{authorfullhash}{878906ebeacf955de242ee960dff61ec}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781098103248}
+      \field{title}{Natural Language Processing with Transformers: Building Language Applications with Hugging Face}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://books.google.de/books?id=7hhyzgEACAAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.de/books?id=7hhyzgEACAAJ
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

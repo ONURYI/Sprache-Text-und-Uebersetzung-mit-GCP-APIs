@@ -370,12 +370,13 @@ Und erhalten die folgende Ausgabe
 \end{verbatim}
 \ \\
 Hier erkennen wir, dass die Sprache präzise transkribiert wird und auch die korrekte Groß- und Kleinschreibung berücksichtigt wird. Allerdings fehlt uns eine Einschätzung der \textit{Confidence} seitens des Modells.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 \section{Sprachübersetzung}
 
-In diesem Abschnitt wird nun die Erkennung und Übersetzung von Texten behandelt. Hierbei wird auf die Möglichkeiten der C\textit{loud Translation API} von Google Cloud eingegangen \cite{cloudtranslation2023}.
+In diesem Abschnitt wird nun die Erkennung und Übersetzung von Texten behandelt (siehe  \cite{tunstall2022natural}). Hierbei wird ebenfalls auf die Möglichkeiten der \textit{Cloud Translation API} von Google Cloud eingegangen (siehe \cite{cloudtranslation2023}).
 \subsection{Übersetzung von Texten}
 Die Übersetzung von Texten ist eine fundamentale Anwendung im NLP, bei der das Ziel darin besteht, Texte von einer Quellsprache in eine Zielsprache zu übertragen. Ein Schlüsselkonzept, das hierbei eine wichtige Rolle spielt, ist das \textbf{Sequence-to-Sequence-Modell}.
 \\ \\
@@ -387,6 +388,13 @@ Es besteht aus zwei grundlegenden Teilen:
 \\ \\
 \textbf{Decoder:} Der Decoder verwendet den Kontextvektor des Encoders, um schrittweise den Text in der Zielsprache zu generieren. Während des Generierungsprozesses greift der Decoder auf den Kontextvektor und die bereits erzeugten Teile des Ausgabetextes zurück, um den nächsten Schritt der Übersetzung zu bestimmen.
 \subsection{Cloud Translation API}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 \newpage
 \section{Textanalyse}
 In diesem Abschnitts steht die Klassifizierung von Texten in verschiedene Kategorien im Vordergrund. Dabei wird erläutert, wie die Natural Language API von Google Cloud eingesetzt werden kann, um Texte einer gründlichen Analyse zu unterziehen und sie in entsprechende Kategorien einzuordnen \cite{classtext2023}. Doch die Möglichkeiten gehen noch weiter. 
