@@ -196,6 +196,7 @@ Die Anzahl der Fehler jeder der drei Arten wird summiert und durch die Gesamtzah
 \newpage
 \subsection{Cloud Speech API}
 \subsubsection{Erstellen eines API-Keys}
+\label{subsubsec:generate-key} 
 Wir beschreiben nun die Schritte, um einen API-Schlüssel zu erstellen und der uns über der SSH bereitgestellten Linux-Instanz verbinden zu können.
 \\ \\
 Um die Cloud Speech API mithilfe von \texttt{curl} anzusprechen, benötigen wir einen API-Schlüssel, der in der Anfrage-URL übergeben wird. Hier sind die Schritte zur Erstellung eines API-Schlüssels:
@@ -309,8 +310,9 @@ Mit dem Befehl \verb|cat result.json| erhält man die folgende Ausgabe:
 \setlength\parindent{0pt}
 Der Wert des \enquote{transcript} gibt die Texttranskription der Audio-Datei durch die Sprach-API wieder, während der \enquote{confidence}-Wert angibt, wie sicher die API ist, dass die Audio-Datei korrekt transkribiert wurde. 
 \\ \\ 
-Wir können die Google Speech-to-Text API auch auf unserer eigenen Entwicklungsumgebung verwenden. Exemplarisch sehen wir hier einen Python-Code, welchem wir die Credentials aus der JSON-Datei übergeben und ebenfalls die selbe FLAC-Audiodatei abrufen \footnote{Auf   \url{https://github.com/ONURYI/Sprache-Text-und-Uebersetzung-mit-GCP-APIs} herunter ladbar} und anschließend die \textbf{recognize-Funktion} aufrufen, um die Spracherkennung durchzuführen.
-\ \\
+Um die Google Speech-to-Text API in unserer eigenen Entwicklungsumgebung zu verwenden, ist es notwendig, zuerst das erforderliche Paket über pip herunterzuladen. Anschließend können wir den folgenden Python-Code verwenden, um die API zu nutzen. Dabei übergeben wir die Credentials aus der JSON-Datei und rufen die recognize-Funktion auf, um die Spracherkennung durchzuführen:
+Die Funktion wird auf die selbe FLAC-Audiodatei\footnote{Auf   \url{https://github.com/ONURYI/Sprache-Text-und-Uebersetzung-mit-GCP-APIs} herunter ladbar} angewandt.
+\
 \begin{lstlisting}[language=Python,numbers = none]
 	from google.cloud import speech
 	
@@ -369,7 +371,7 @@ Und erhalten die folgende Ausgabe
 		'language': 'en'}
 \end{verbatim}
 \ \\
-Hier erkennen wir, dass die Sprache präzise transkribiert wird und auch die korrekte Groß- und Kleinschreibung berücksichtigt wird. Allerdings fehlt uns eine Einschätzung der \textit{Confidence} seitens des Modells.
+Hier erkennen wir ebenfalls, dass die Sprache präzise transkribiert wird und auch die korrekte Groß- und Kleinschreibung berücksichtigt wird. Allerdings fehlt uns eine Einschätzung der \textit{Confidence} seitens des Modells.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -387,7 +389,61 @@ Es besteht aus zwei grundlegenden Teilen:
 \textbf{Encoder:} Der Encoder nimmt den Eingabetext in der Quellsprache auf, analysiert ihn und erstellt eine kompakte Repräsentation des Textes. Diese Repräsentation, oft als "Kontextvektor" bezeichnet, erfasst die semantischen und syntaktischen Eigenschaften des Eingabetextes.
 \\ \\
 \textbf{Decoder:} Der Decoder verwendet den Kontextvektor des Encoders, um schrittweise den Text in der Zielsprache zu generieren. Während des Generierungsprozesses greift der Decoder auf den Kontextvektor und die bereits erzeugten Teile des Ausgabetextes zurück, um den nächsten Schritt der Übersetzung zu bestimmen.
+\ \\
+\begin{center}
+	\begin{tikzpicture}[node distance=2cm]
+		% Nodes
+		\node [rectangle, draw, minimum width=3cm] (encoder) {Encoder};
+		\node [rectangle, below of=encoder] (context) {Kontextvektor};
+		\node [rectangle, draw, minimum width=3cm, below of=context] (decoder) {Decoder};
+		
+		% Arrows
+		\draw [-latex] (encoder) -- (context);
+		\draw [-latex] (context) -- (decoder);
+	\end{tikzpicture}
+\end{center}
+Wir versuchen das Sequence-to-Sequence-Modell noch einmal mit einem Beispiel zu verdeutlichen.
+\ \\ 
+Angenommen, wir haben die englischen und deutschen Sätze;
+\\ \\
+Englisch: \enquote{How old is the Brooklyn Bridge?}
+\\  \\
+Deutsch: \enquote{Wie alt ist die Brooklyn Bridge?}
+\\ \\
+Und unser Ziel ist es, vom englischen ins deutsche zu übersetzen. Folgende Schritte werden hier nun durchlaufen: \\
+\begin{enumerate}
+	\item \textbf{Tokenisierung:} \\
+	Wir teilen die Sätze in Wörter oder Satzzeichen auf:
+	\begin{itemize}
+		\item Englisch: [\enquote{How}, \enquote{old}, \enquote{is}, \enquote{the}, \enquote{Brooklyn}, \enquote{Bridge}, \enquote{?}]
+		\item Deutsch: [\enquote{Wie}, \enquote{alt}, \enquote{ist}, \enquote{die}, \enquote{Brooklyn}, \enquote{Bridge}, \enquote{?}]
+	\end{itemize}
+	
+	\item \textbf{Vokabular erstellen:} \\
+	Wir erstellen Vokabulare für Englisch und Deutsch:
+	\begin{itemize}
+		\item Englisches Vokabular: [\enquote{How}, \enquote{old}, \enquote{is}, \enquote{the}, \enquote{Brooklyn}, \enquote{Bridge}, \enquote{?}, ...]
+		\item Deutsches Vokabular: [\enquote{Wie}, \enquote{alt}, \enquote{ist}, \enquote{die}, \enquote{Brooklyn}, \enquote{Bridge}, \enquote{?}, ...]
+	\end{itemize}
+	
+	\item \textbf{Token-IDs zuweisen:} \\
+	Jedes Wort wird einer numerischen ID\footnote{Exemplarisch willkürliche Darstellung.} zugeordnet:
+	\begin{itemize}
+		\item Englische Token-IDs: [101, 102, 103, 104, 105, 106, 107]
+		\item Deutsche Token-IDs: [201, 202, 203, 204, 205, 206, 207]
+	\end{itemize}
+	
+	\item \textbf{Training:} \\
+	Das Modell wird mit den englischen Token-IDs als Eingabe und den deutschen Token-IDs als Ziel trainiert. Der Encoder verarbeitet den englischen Satz und erzeugt einen Kontextvektor. 
+	
+	\item \textbf{Übersetzung:} \\
+	Der Decoder nutzt diesen Kontextvektor, um den deutschen Satz zu generieren.
+\end{enumerate}
+\ \\
+Dies ist nur ein sehr stark vereinfachte Darstellung. In der Praxis werden häufig auf fortschrittliche neuronale Netzwerkarchitekturen wie RNNs, LSTMs und \textit{Attention Layers} zurückgegriffen. Letzteres zeichnet sich durch die Fähigkeit aus, den Kontext eines Satzes zu erfassen.
 \subsection{Cloud Translation API}
+Die Schritte zur Erstellung eines API-KEYs sind identisch mit dem in \ref{subsubsec:generate-key} Ablauf beschrieben Prozess.
+
 
 
 
