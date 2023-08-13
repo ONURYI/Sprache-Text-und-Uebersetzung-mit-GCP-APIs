@@ -488,15 +488,54 @@ Die Entitäten- und Sentimentanalyse erweitert die Textanalyse. Entitäten sind 
 \\ \\
 Gleichzeitig erfasst die Sentimentanalyse die emotionale Tonalität eines Textes, sei es positiv, neutral oder negativ. Sie basiert auf der Auswertung von Wörtern und Ausdrücken im Text und ermöglicht somit die Einschätzung der übergeordneten Stimmung oder Meinung.
 \subsection{Natural Language API}
+Die Schritte zur Erstellung des API-Schlüssels sind erneut identisch mit dem in \ref{subsubsec:generate-key} beschriebenem. Um sicherzustellen, dass diese auch tatsächlich aktiviert sind, können wir in der Suchleiste \textit{\enquote{language}} eingeben und sehen das die Aktivierung funktioniert hat.
 
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../images/cloud_NLP_API}
+	\label{fig:cloudnlpapi}
+\end{figure}
+\ \\
+Mit Hilfe der \textbf{classifyText-Methode} der Natural Language API können wir Textdaten mithilfe eines einzigen API-Aufrufs in verschiedene Kategorien einteilen. Diese Methode liefert uns eine Liste von Inhaltskategorien, die auf ein Textdokument zutreffen.
+\\ \\
+Hierzu naviegeren wir wie in \ref{subsubsec:generate-key} zur Linux Instanz und erstellen folgende Anfrage:
+\begin{verbatim}
+	{
+		"document":{
+			"type":"PLAIN_TEXT",
+			"content":"A Smoky Lobster Salad With a Tapa Twist. 
+			This spin on the Spanish pulpo a la gallega skips the octopus, 
+			but keeps the sea salt, olive oil, pimentón and boiled potatoes."
+		}
+	}
+\end{verbatim}
+Jetzt könnt ihr diesen Text mithilfe des folgenden curl-Befehls an die classifyText-Methode der Natural Language API senden
+\begin{verbatim}
+	curl "https://language.googleapis.com/v1/documents:
+	classifyText?key=${API_KEY}" \ -s -X POST -H "Content-Type: 
+	application/json" --data-binary @request.json > result.json
+\end{verbatim}
+und sehen, dass zwei Kategorien für diesen Text zurückgegeben worden sind:
 
-
+\begin{itemize}
+	\item /Food \& Drink/Cooking \& Recipes
+	\item /Food \& Drink/Food/Meat \& Seafood
+\end{itemize}
+\newpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.8\linewidth]{../images/response_category}
+	\label{fig:responsecategory}
+\end{figure}
+\ \\
+Abschließend schauen wir nun die Entitäts - und Sentimentanalyse mit der Natural Language API an.
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
+\
 \newpage
 \thispagestyle{empty}
 \printbibliography
