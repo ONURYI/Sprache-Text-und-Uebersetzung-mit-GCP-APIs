@@ -558,11 +558,11 @@ Der erste Teil der zugehörige Ausgabe sieht dann wie folgt aus:
 	\label{fig:entity}
 \end{figure}
 \ \\
-Nun wenn z.B. die Stimmung des folgendes Textes
+Darüber hinaus können wir nun auch die Stimmung des folgenden Textes erfassen:
 \begin{verbatim}
 	"Harry Potter is the best book. I think everyone should read it."
 \end{verbatim}
-verstehen möchten, fügen wir folgenden Text in unsere request Datei ein:
+Letzteres übergeben wir erneut unserer request Datei.
 \begin{verbatim}
  {
 	"document":{
@@ -572,7 +572,7 @@ verstehen möchten, fügen wir folgenden Text in unsere request Datei ein:
 	"encodingType": "UTF8"
 }
 \end{verbatim}
-und erhalten mit dem Befehl
+Und erhalten mit dem Befehl
 \begin{verbatim}
 curl "https://language.googleapis.com/v1/documents:
 analyzeSentiment?key=${API_KEY}" \-s -X POST -H "Content-Type: 
@@ -582,7 +582,7 @@ folgendes Ergebnis:
 \newpage
 \begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{../images/sentiment}
+	\includegraphics[width=0.9\linewidth]{../images/sentiment}
 	\label{fig:sentiment}
 \end{figure}
 \ \\
@@ -601,8 +601,7 @@ Größe (Magnitude): Ist eine Zahl im Bereich von 0 bis unendlich, die das Gewic
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\
+
 \newpage
 \thispagestyle{empty}
 \printbibliography
