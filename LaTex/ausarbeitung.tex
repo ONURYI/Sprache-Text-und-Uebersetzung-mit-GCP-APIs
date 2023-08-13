@@ -528,7 +528,74 @@ und sehen, dass zwei Kategorien für diesen Text zurückgegeben worden sind:
 	\label{fig:responsecategory}
 \end{figure}
 \ \\
-Abschließend schauen wir nun die Entitäts - und Sentimentanalyse mit der Natural Language API an.
+Abschließend schauen wir uns nun noch die Entitäts - und Sentimentanalyse mit der Natural Language API an. Die API ist dieselbe es wird lediglich eine andere Methode aufgerufen und zwar die \textbf{analyzeEntities-Methode}.
+\\ \\
+Hierzu wollen wir den Text
+\begin{verbatim}
+	"Joanne Rowling, who writes under the pen names J. K. Rowling
+	and Robert Galbraith, is a British novelist and screenwriter 
+	who wrote the Harry Potter fantasy series."
+\end{verbatim}
+in Entitäten aufteilen. 
+\\ \\
+In der Anfrage teilen wir der Natural Language API Informationen über den zu sendenden Text mit. Die unterstützten Typwerte sind \texttt{PLAIN\_TEXT} oder \texttt{HTML}.
+\begin{verbatim}
+	{
+		"document":{
+			"type":"PLAIN_TEXT",
+			"content":"Joanne Rowling, who writes under the pen names 
+			J. K. Rowling and Robert Galbraith, is a British novelist 
+			and screenwriter who wrote the Harry Potter fantasy series."
+		},
+		"encodingType":"UTF8"
+	}
+\end{verbatim}
+Der erste Teil der zugehörige Ausgabe sieht dann wie folgt aus:
+\newpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1\linewidth]{../images/entity}
+	\label{fig:entity}
+\end{figure}
+\ \\
+Nun wenn z.B. die Stimmung des folgendes Textes
+\begin{verbatim}
+	"Harry Potter is the best book. I think everyone should read it."
+\end{verbatim}
+verstehen möchten, fügen wir folgenden Text in unsere request Datei ein:
+\begin{verbatim}
+ {
+	"document":{
+		"type":"PLAIN_TEXT",
+		"content":"Harry Potter is the best book. I think everyone should read it."
+	},
+	"encodingType": "UTF8"
+}
+\end{verbatim}
+und erhalten mit dem Befehl
+\begin{verbatim}
+curl "https://language.googleapis.com/v1/documents:
+analyzeSentiment?key=${API_KEY}" \-s -X POST -H "Content-Type: 
+application/json" --data-binary @request.json
+\end{verbatim}
+folgendes Ergebnis:
+\newpage
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{../images/sentiment}
+	\label{fig:sentiment}
+\end{figure}
+\ \\
+Es ist zu beachten, dass wir hier zwei Arten von Stimmungswerten erhalten: die Stimmung für das gesamte Dokument und die Stimmung aufgeschlüsselt nach Sätzen. Die Stimmungsmethode gibt zwei Werte zurück:
+\\ \\
+Score: Ist eine Zahl von -1,0 bis 1,0, die anzeigt, wie positiv oder negativ die Aussage ist.
+\\ \\
+Größe (Magnitude): Ist eine Zahl im Bereich von 0 bis unendlich, die das Gewicht der Stimmung repräsentiert, unabhängig davon, ob sie positiv oder negativ ist.
+
+
+
+
+
 
 
 
